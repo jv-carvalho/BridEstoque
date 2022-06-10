@@ -1,0 +1,48 @@
+2022-05-27 23:30:13 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bridestoque.login' doesn't exist in C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'login', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('login', Array)
+#2 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('login')
+#3 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#4 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'login', 'Login')
+#7 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Login')
+#8 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Login')
+#9 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Login', 0)
+#10 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('login')
+#12 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Dev\BridEstoque\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bridestoque.login' doesn't exist in C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 38
+Stack Trace:
+#0 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(38): PDOStatement->execute(NULL)
+#1 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Connection.php(349): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Connection.php(352): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Connection.php(301): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Connection.php(305): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'login', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(62): Cake\Database\Schema\Collection->describe('login', Array)
+#10 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\ORM\Table.php(559): Cake\Database\Schema\CachedCollection->describe('login')
+#11 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\ORM\Table.php(684): Cake\ORM\Table->getSchema()
+#12 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'login', 'Login')
+#15 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Login')
+#16 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Login')
+#17 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Login', 0)
+#18 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#19 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('login')
+#20 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#21 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 C:\Dev\BridEstoque\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+
