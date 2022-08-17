@@ -46,3 +46,28 @@ Stack Trace:
 #23 {main}
 
 
+2022-08-15 23:05:45 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Driver.php on line 92
+Stack Trace:
+#0 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Driver.php(92): PDO->__construct('mysql:host=127....', 'root', '151102', Array)
+#1 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=127....', Array)
+#2 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Database\Connection.php(390): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1096): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1050): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(213): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(App\Model\Table\UsersTable))
+#11 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(App\Model\Table\UsersTable), 'users', 'Users')
+#12 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Users')
+#13 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Users')
+#14 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Users', 0)
+#15 C:\Dev\BridEstoque\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#16 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('users')
+#17 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#18 C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#19 C:\Dev\BridEstoque\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#20 {main}
+
+
