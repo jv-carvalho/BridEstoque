@@ -31,7 +31,7 @@ class AppController extends Controller
      * Initialization hook method.
      *
      * Use this method to add common initialization code like loading components.
-     *-
+     *
      * e.g. `$this->loadComponent('Security');`
      *
      * @return void
@@ -45,10 +45,19 @@ class AppController extends Controller
         ]);
         $this->loadComponent('Flash');
 
+        
+
+        
+
         /*
-         * Enable the followling component for recommended CakePHP security settings.
+         * Enable the following component for recommended CakePHP security settings.
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
-        //$this->loadComponent('Security');
+        // $this->loadComponent('Security');
+    }
+
+    public function beforeRender(Event $event)
+    {
+        
     }
 }

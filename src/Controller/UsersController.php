@@ -13,32 +13,20 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
+    public function initialize() {
+        parent::initialize();
+
+        
+    }
     /**
      * Index method
      *
      * @return \Cake\Http\Response|null
      */
-    public function index()
-    {
-        $key = $this->request->getQuery('key');
-
-        $this->paginate = [
-            'limit' => 5,
-            'order' => [
-                'Users.id' => 'desc',
-
-            ]
-        ];
-
-        $users = $this->paginate($this->Users->find('all')->where(
-            [
-                'Or' =>
-                [
-                    'username like' => '%' . $key . '%', 'role like' => '%' . $key . '%', 'Setor like' => '%' . $key . '%'
-                ]
-            ]
-        ));
-
+    public function index() {
+        $query = $this->Users->find('search', ['search' => $this->request->query]);
+        $users = $this->paginate($query, array('limit'=>20));
+        $this->set('isSearch', $this->Users->isSearch());
         $this->set(compact('users'));
     }
 

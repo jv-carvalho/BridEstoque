@@ -25,9 +25,28 @@
         echo $this->Form->control('Nome');
         echo $this->Form->control('Setor');
         echo $this->Form->control('Cargo');
-        echo $this->Form->control('password',["label"=>"Senha"]);
         ?>
+        <div class="col-12 col-sm-6">
+          <?php
+            echo $this->Form->control('password', ['value' => hash('adler32', 'bridestoque'.(string)rand(1, 9999)), 'label' => 'Senha:']);
+          ?>
+          <div class="users form large-10 medium-8 columns content">
+            <input type="checkbox" onclick="myFunction()"> Exibir Senha
+          </div>
+          <script>
+            function myFunction() {
+                var x = document.getElementById("password");
+                    if (x.type === "password") {
+                     x.type = "text";
+                    } else {
+                      x.type = "password";
+                    }
+                }
+            </script>
+        </div>
     </fieldset>
+
+
     <?= $this->Form->button(__('Adicionar')) ?>
     <?= $this->Form->end() ?>
 </div>
