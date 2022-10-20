@@ -40,14 +40,26 @@ class AppController extends Controller
     {
         parent::initialize();
 
-        $this->loadComponent('RequestHandler', [
-            'enableBeforeRedirect' => false,
-        ]);
+        $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-
-        
-
-        
+        $this->loadComponent('Auth', [
+            'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                      'username' => 'username',
+                       'password' => 'password'
+                    ]
+                ]
+            ],
+            'loginRedirect' => [
+                'controller' => 'Users',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Users',
+                'action' => 'login'
+            ]
+        ]);
 
         /*
          * Enable the following component for recommended CakePHP security settings.
@@ -56,8 +68,8 @@ class AppController extends Controller
         // $this->loadComponent('Security');
     }
 
-    public function beforeRender(Event $event)
-    {
-        
+    public function beforeFilter(Event $event){
+        $this->set('username', $this->Auth->user('username'));
     }
+
 }

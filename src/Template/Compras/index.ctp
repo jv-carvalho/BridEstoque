@@ -21,22 +21,22 @@
         <br/>   
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('Id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Data') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Total Da Compra') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Numero Documento') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Criado') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
-                <th scope="col" style="color: #518d06;" class="actions"><?= __('Ações') ?></th>
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Data:') ?></th>
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Total Da Compra:') ?></th>
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Numero Documento:') ?></th>
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
+            <th class= "text-center" scope="col" class="actions"> <?= __('Ações') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($compras as $compra) : ?>
                 <tr>
                     <td><?= $this->Number->format($compra->id) ?></td>
-                    <td><?= h($compra->username) ?></td>
-                    <td><?= h($compra->email) ?></td>
-                    <td><?= h($compra->telefone) ?></td>
+                    <td><?= h($compra->Data) ?></td>
+                    <td><?= h($compra->TotalDaCompra) ?></td>
+                    <td><?= h($compra->NumeroDocumento) ?></td>
                     <td><?= h($compra->created) ?></td>
                     <td><?= h($compra->modified) ?></td>
                     <td class="actions">

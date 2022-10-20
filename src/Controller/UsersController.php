@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Users Controller
@@ -13,20 +14,38 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
-    public function initialize() {
-        parent::initialize();
 
-        
+    public function beforeFilter(Event $event){
+        parent::beforeFilter($event);
+        $this->Auth->allow('add');
     }
+
     /**
      * Index method
      *
      * @return \Cake\Http\Response|null
      */
-    public function index() {
-        $query = $this->Users->find('search', ['search' => $this->request->query]);
-        $users = $this->paginate($query, array('limit'=>20));
-        $this->set('isSearch', $this->Users->isSearch());
+    public function index()
+    {
+        $key = $this->request->getQuery('key');
+
+        $this->paginate = [
+            'limit' => 5,
+            'order' => [
+                'Users.id' => 'desc',
+
+            ]
+        ];
+
+        $users = $this->paginate($this->Users->find('all')->where(
+            [
+                'Or' =>
+                [
+                    'username like' => '%' . $key . '%', 'role like' => '%' . $key . '%', 'Setor like' => '%' . $key . '%'
+                ]
+            ]
+        ));
+
         $this->set(compact('users'));
     }
 
@@ -42,7 +61,7 @@ class UsersController extends AppController
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
-
+        
         $this->set('user', $user);
     }
 
@@ -51,8 +70,8 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add(){
-        
+    public function add()
+    {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             // $user = $this->Users->patchEntity($user, $this->request->getData());
@@ -112,5 +131,20 @@ class UsersController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function login(){
+        if($this->request->is('post')){
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error(_('Usuário ou senha inválida, tente novamente.'));
+        }
+    }
+
+    public function logout(){
+        return $this->redirect($this->Auth->logout()); 
     }
 }

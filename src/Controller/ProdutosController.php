@@ -35,6 +35,14 @@ class ProdutosController extends AppController
                 'Or' =>
                 [
                     'username like' => '%' . $key . '%'
+                ],
+                'Or' =>
+                [
+                    'descrição like' => '%' . $key . '%'
+                ],
+                'Or' =>
+                [
+                    'saldo like' => '%' . $key . '%'
                 ]
             ]
         ));
@@ -64,7 +72,7 @@ class ProdutosController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
     public function add(){
-        
+
         $produto = $this->Produtos->newEntity();
         if ($this->request->is('post')) {
             // $produto = $this->Produto->patchEntity($produto, $this->request->getData());

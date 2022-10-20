@@ -8,6 +8,7 @@ use Cake\ORM\Table;
 use Cake\TestSuite\Constraint\Response\BodyNotEmpty;
 use Cake\Validation\Validator;
 
+
 /**
  * Users Model
  *
@@ -56,8 +57,8 @@ class UsersTable extends Table
         $validator
             ->scalar('Nome')
             ->maxLength('Nome', 50)
-            ->requirePresence('username', 'create')
-            ->NotEmpty('Nome', 'Necessário preencher o campo nome');
+            ->requirePresence('Nome', 'create')
+            ->NotEmpty('username', 'Necessário preencher o campo nome');
 
         $validator
             ->scalar('password')

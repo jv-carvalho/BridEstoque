@@ -35,10 +35,18 @@ class FornecedoresController extends AppController
                 'Or' =>
                 [
                     'username like' => '%' . $key . '%'
-                ]
+                ],
+                'Or' =>
+                [
+                    'email like' => '%' . $key . '%'
+                ],
+                'Or' =>
+                [
+                    'telefone like' => '%' . $key . '%'
+                ],
             ]
         ));
-
+        
         $this->set(compact('fornecedores'));
     }
 
@@ -67,10 +75,14 @@ class FornecedoresController extends AppController
         
         $fornecedor = $this->Fornecedores->newEntity();
         if ($this->request->is('post')) {
-            // $fornecedor = $this->Fornecedor->patchEntity($fornecedor, $this->request->getData());
-            $fornecedor->username =  $this->request->getData('Nome', 'Nulo');
-            $fornecedor->email =  $this->request->getData('Email', 'Nulo');
-            $fornecedor->telefone =  $this->request->getData('Telefone', 'Nulo');
+            
+            $nome = $this->request->getData('Nome', 'Nulo');
+            $email = $this->request->getData('email', 'Nulo');
+            $telefone = preg_replace('/[^0-9]/', '',$this->request->getData('telefone', 'Nulo'));
+
+            $fornecedor->username = $nome;
+            $fornecedor->email =  $email;
+            $fornecedor->telefone =  (string)$telefone;
             if ($this->Fornecedores->save($fornecedor)) {
                 $this->Flash->success(__('O usuário foi salvo.'));
 
@@ -80,7 +92,11 @@ class FornecedoresController extends AppController
         }
         $this->set(compact('fornecedor'));
     }
-
+    public function prd($var)
+    {
+        pr($var);
+        die;
+    }
     /**
      * Edit method
      *

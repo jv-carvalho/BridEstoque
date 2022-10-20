@@ -55,36 +55,22 @@ class FornecedoresTable extends Table
 
         $validator
             ->scalar('Nome')
-            ->maxLength('Nome', 50)
+            ->maxLength('Nome', 255)
             ->requirePresence('username', 'create')
             ->NotEmpty('Nome', 'Necessário preencher o campo nome');
 
         $validator
-            ->scalar('Email')
-            ->maxLength('Email', 255)
-            ->requirePresence('Email', 'create')
-            ->NotEmpty('Email', 'Necessário preencher o campo senha');
+            ->scalar('email')
+            ->maxLength('email', 255)
+            ->requirePresence('email', 'create')
+            ->NotEmpty('email', 'Necessário preencher o campo senha');
 
         $validator
-            ->scalar('Telefone')
-            ->maxLength('Telefone', 255)
-            ->requirePresence('Telefone', 'create')
-            ->NotEmpty('Telefone', 'Necessário preencher o campo setor');
+            ->scalar('telefone')
+            ->maxLength('telefone', 255)
+            ->requirePresence('telefone', 'create')
+            ->NotEmpty('telefone', 'Necessário preencher o campo setor');
 
         return $validator;
-    }
-
-    /**
-     * Returns a rules checker object that will be used for validating
-     * application integrity.
-     *
-     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
-     * @return \Cake\ORM\RulesChecker
-     */
-    public function buildRules(RulesChecker $rules)
-    {
-        $rules->add($rules->isUnique(['username']));
-
-        return $rules;
     }
 }

@@ -9,11 +9,7 @@
         <li class="heading"><?= __('Ações') ?></li>
         <li><?= $this->Html->link(__('Adicionar Usuário'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('Listar Usuários'), ['action' => 'index']) ?></li>
-        <li><?= $this->Form->postLink(
-                __('Deletar Usuário'),
-                ['action' => 'delete', $user->id],
-                ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $user->id)]
-            )
+        <li><?= $this->Form->postLink(__('Deletar Usuário'),['action' => 'delete', $user->id],['confirm' => __('Você tem certeza que deseja deletar #{0}?', $user->id)])
         ?></li>
     </ul>
 </nav>

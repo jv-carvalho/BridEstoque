@@ -8,7 +8,7 @@
 <nav class="large-2 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading" style="color: #518d06;"><?= __('Ações') ?></li>
-        <li style="color: #518d06;"><?= $this->Html->link(__('Adicionar Usuário'), ['action' => 'add'], array('style' => 'color: #518d06;')) ?></li>
+        <li style="color: #518d06;"><?= $this->Html->link(__('Adicionar Fornecedor'), ['action' => 'add'], array('style' => 'color: #518d06;')) ?></li>
     </ul>
 </nav>
 <div class="fornecedor index large-10 medium-12 columns content">
@@ -18,7 +18,7 @@
     <?= $this->Form->submit('Filtrar') ?>
     <?= $this->Form->end() ?>
     <table cellpadding="0" cellspacing="0">
-        <br/>   
+        <br />
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('Id') ?></th>
@@ -36,7 +36,7 @@
                     <td><?= $this->Number->format($fornecedor->id) ?></td>
                     <td><?= h($fornecedor->username) ?></td>
                     <td><?= h($fornecedor->email) ?></td>
-                    <td><?= h($fornecedor->telefone) ?></td>
+                    <td><?= formataTelefone($fornecedor->telefone) ?></td>
                     <td><?= h($fornecedor->created) ?></td>
                     <td><?= h($fornecedor->modified) ?></td>
                     <td class="actions">
@@ -59,3 +59,16 @@
         <p><?= $this->Paginator->counter(['format' => __('Página {{page}} de {{pages}}, mostrado {{current}} registro(s) do total de {{count}}.')]) ?></p>
     </div>
 </div>
+
+<?php
+function formataTelefone($phone)
+{
+    $formatedPhone = preg_replace('/[^0-9]/', '', $phone);
+    $matches = [];
+    preg_match('/^([0-9]{2})([0-9]{4,5})([0-9]{4})$/', $formatedPhone, $matches);
+    if ($matches) {
+        return '(' . $matches[1] . ') ' . $matches[2] . '-' . $matches[3];
+    }
+
+    return $phone;
+}

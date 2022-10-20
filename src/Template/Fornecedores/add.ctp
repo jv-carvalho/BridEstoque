@@ -23,36 +23,11 @@
         <legend><?= __('Adicionar Fornecedor') ?></legend>
         <?php
         echo $this->Form->control('Nome');
-        echo $this->Form->control('Email');
-        echo $this->Form->control('Telefone');
+        echo $this->Form->control('email',["label"=>"Email"]);
+        echo $this->Form->control('telefone',["label"=>"Telefone", "id" => "cellphone", "data-slots" => "_", "placeholder" => "(__) _____-____", "required" => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Adicionar')) ?>
     <?= $this->Form->end() ?>
 </div>
 
-<?php
-
-$this->Html->css([
-    // 'AdminLTE./js/jquery.inputmask.bundle.js'
-  ],
-  ['block' => 'css']);
-
-$this->Html->script([
-  '/js/jquery.inputmask.bundle.js'
-  // 'AdminLTE./plugins/select2/select2.full.min'
-  ],
-  ['block' => 'script']);
-
-?>
-
-<?php $this->start('scriptBottom'); ?>
-<script>
-  $(document).ready(function() {
-    $("#cellphone").inputmask({
-      mask: ["(99) 9999-9999", "(99) 99999-9999"],
-      keepStatic: true
-    });
-  });
-</script>
-<?php $this->end(); ?>

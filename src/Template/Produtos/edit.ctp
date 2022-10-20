@@ -22,9 +22,9 @@
     <fieldset>
         <legend><?= __('Editar Produto') ?></legend>
         <?php
-            echo $this->Form->control('username',["label"=>"Nome"]);
-            echo $this->Form->control('Descrição');
-            echo $this->Form->control('Saldo');
+            echo $this->Form->control('username', ["label"=>"Nome"]);
+            echo $this->Form->control('descrição', ["label"=>"Descrição"]);
+            echo $this->Form->control('saldo', ["label"=>"Saldo"]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Salvar')) ?>

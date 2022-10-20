@@ -55,21 +55,21 @@ class ProdutosTable extends Table
 
         $validator
             ->scalar('Nome')
-            ->maxLength('Nome', 50)
-            ->requirePresence('username', 'create')
-            ->NotEmpty('Nome', 'Necessário preencher o campo nome');
+            ->maxLength('Nome', 255)
+            ->requirePresence('Nome', 'create')
+            ->NotEmpty('username', 'Necessário preencher o campo nome');
 
         $validator
-            ->scalar('Descrição')
-            ->maxLength('Descrição', 255)
-            ->requirePresence('Descrição', 'create')
+            ->scalar('descrição')
+            ->maxLength('descrição', 255)
+            ->requirePresence('descrição', 'create')
             ->NotEmpty('Descrição', 'Necessário preencher o campo senha');
 
         $validator
             ->scalar('Saldo')
             ->maxLength('Saldo', 255)
             ->requirePresence('Saldo', 'create')
-            ->NotEmpty('Saldo', 'Necessário preencher o campo setor');
+            ->NotEmpty('saldo', 'Necessário preencher o campo setor');
 
         return $validator;
     }

@@ -23,8 +23,8 @@
         <legend><?= __('Editar Fornecedor') ?></legend>
         <?php
             echo $this->Form->control('username',["label"=>"Nome"]);
-            echo $this->Form->control('Email');
-            echo $this->Form->control('Telefone');
+            echo $this->Form->control('email');
+            echo $this->Form->control('telefone');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Salvar')) ?>
