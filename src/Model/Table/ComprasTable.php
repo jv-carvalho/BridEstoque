@@ -3,10 +3,11 @@
 namespace App\Model\Table;
 
 use Cake\ORM\Query;
-use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\TestSuite\Constraint\Response\BodyNotEmpty;
 use Cake\Validation\Validator;
+use Cake\Event\Event;
+use ArrayObject;
 
 /**
  * Fornecedores Model
@@ -54,10 +55,10 @@ class ComprasTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->scalar('Data')
-            ->maxLength('Data', 50)
-            ->requirePresence('Data', 'create')
-            ->NotEmpty('Data', 'Necessário preencher o campo nome');
+            ->scalar('data')
+            ->maxLength('data', 255)
+            ->requirePresence('data', 'create')
+            ->NotEmpty('data', 'Necessário preencher o campo senha');
 
         $validator
             ->scalar('TotalDaCompra')
@@ -81,5 +82,11 @@ class ComprasTable extends Table
      * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
      * @return \Cake\ORM\RulesChecker
      */
-    
+
+    public function beforeMarshal(Event $event, ArrayObject $compra, ArrayObject $options)
+    {
+        if (isset($compra['data'])) {
+            $compra['data'] =  $compra['data']['year'] . "-" . $compra['data']['month'] . "-" . $compra['data']['day'];
+        }
+    }
 }

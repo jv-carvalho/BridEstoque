@@ -24,7 +24,7 @@
         <?php
             echo $this->Form->control('username',["label"=>"Nome"]);
             echo $this->Form->control('email');
-            echo $this->Form->control('telefone');
+            echo $this->Form->control('telefone',["label"=>"Telefone", "id" => "cellphone", "data-slots" => "_", "placeholder" => "(__) _____-____", "required" => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Salvar')) ?>

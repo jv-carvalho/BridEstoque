@@ -21,25 +21,25 @@
         <br/>   
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('Id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Nome') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Setor') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Cargo') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Criado') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
-                <th scope="col" style="color: #518d06;" class="actions"><?= __('Ações') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Nome') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Setor') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Cargo') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
+                <th class= "text-center" scope="col" style="color: #518d06;" class="actions"><?= __('Ações') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($users as $user) : ?>
                 <tr>
-                    <td><?= $this->Number->format($user->id) ?></td>
-                    <td><?= h($user->username) ?></td>
-                    <td><?= h($user->Setor) ?></td>
-                    <td><?= h($user->role) ?></td>
-                    <td><?= h($user->created) ?></td>
-                    <td><?= h($user->modified) ?></td>
-                    <td class="actions">
+                    <td class= "text-center"><?= $this->Number->format($user->id) ?></td>
+                    <td class= "text-center"><?= h($user->username) ?></td>
+                    <td class= "text-center"><?= h($user->Setor) ?></td>
+                    <td class= "text-center"><?= h($user->role) ?></td>
+                    <td class= "text-center"><?= h($user->created) ?></td>
+                    <td class= "text-center"><?= h($user->modified) ?></td>
+                    <td class="actions text-center">
                         <?= $this->Html->link(__('Ver'), ['action' => 'view', $user->id]) ?>
                         <?= $this->Html->link(__('Editar'), ['action' => 'edit', $user->id]) ?>
                         <?= $this->Form->postLink(__('Apagar'), ['action' => 'delete', $user->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $user->id)]) ?>

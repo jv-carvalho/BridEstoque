@@ -25,17 +25,17 @@
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Tamanho:') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
-            <th scope="col" style="color: #518d06;" class="actions"><?= __('Ações') ?></th>
+            <th scope="col" style="color: #518d06;" class="actions text-center"><?= __('Ações') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($UnidadeMedidas as $UnidadeMedida) : ?>
                 <tr>
-                    <td><?= $this->Number->format($UnidadeMedida->id) ?></td>
-                    <td><?= h($UnidadeMedida->tamanho) ?></td>
-                    <td><?= h($UnidadeMedida->created) ?></td>
-                    <td><?= h($UnidadeMedida->modified) ?></td>
-                    <td class="actions">
+                    <td class= "text-center"><?= $this->Number->format($UnidadeMedida->id) ?></td>
+                    <td class= "text-center"><?= h($UnidadeMedida->tamanho) ?></td>
+                    <td class= "text-center"><?= h($UnidadeMedida->created) ?></td>
+                    <td class= "text-center"><?= h($UnidadeMedida->modified) ?></td>
+                    <td class="actions text-center">
                         <?= $this->Html->link(__('Ver'), ['action' => 'view', $UnidadeMedida->id]) ?>
                         <?= $this->Html->link(__('Editar'), ['action' => 'edit', $UnidadeMedida->id]) ?>
                         <?= $this->Form->postLink(__('Apagar'), ['action' => 'delete', $UnidadeMedida->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $UnidadeMedida->id)]) ?>

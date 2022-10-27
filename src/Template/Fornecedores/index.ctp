@@ -21,25 +21,25 @@
         <br />
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('Id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Nome') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Email') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Telefone') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Criado') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
-                <th scope="col" style="color: #518d06;" class="actions"><?= __('Ações') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Nome') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Email') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Telefone') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
+                <th class= "text-center" scope="col" style="color: #518d06;" class="actions"><?= __('Ações') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($fornecedores as $fornecedor) : ?>
                 <tr>
-                    <td><?= $this->Number->format($fornecedor->id) ?></td>
-                    <td><?= h($fornecedor->username) ?></td>
-                    <td><?= h($fornecedor->email) ?></td>
-                    <td><?= formataTelefone($fornecedor->telefone) ?></td>
-                    <td><?= h($fornecedor->created) ?></td>
-                    <td><?= h($fornecedor->modified) ?></td>
-                    <td class="actions">
+                    <td class= "text-center"><?= $this->Number->format($fornecedor->id) ?></td>
+                    <td class= "text-center"><?= h($fornecedor->username) ?></td>
+                    <td class= "text-center"><?= h($fornecedor->email) ?></td>
+                    <td class= "text-center"><?= formataTelefone($fornecedor->telefone) ?></td>
+                    <td class= "text-center"><?= h($fornecedor->created) ?></td>
+                    <td class= "text-center"><?= h($fornecedor->modified) ?></td>
+                    <td class="actions text-center">
                         <?= $this->Html->link(__('Ver'), ['action' => 'view', $fornecedor->id]) ?>
                         <?= $this->Html->link(__('Editar'), ['action' => 'edit', $fornecedor->id]) ?>
                         <?= $this->Form->postLink(__('Apagar'), ['action' => 'delete', $fornecedor->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $fornecedor->id)]) ?>

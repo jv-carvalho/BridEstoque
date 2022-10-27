@@ -22,7 +22,7 @@
     <fieldset>
         <legend><?= __('Adicionar Unidade de Medida') ?></legend>
         <?php
-        echo $this->Form->control('Tamanho:');
+        echo $this->Form->control('tamanho', ['label' => 'Tamanho:']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Adicionar')) ?>

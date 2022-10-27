@@ -41,10 +41,6 @@ class UnidadeMedidasController extends AppController
                 'Or' =>
                 [
                     'tamanho like' => '%' . $key . '%'
-                ],
-                'Or' =>
-                [
-                    'tamanho like' => '%' . $key . '%'
                 ]
             ]
         ));
@@ -82,14 +78,14 @@ class UnidadeMedidasController extends AppController
         
         $UnidadeMedida = $this->UnidadeMedidas->newEntity();
         if ($this->request->is('post')) {
-            // $UnidadeMedida = $this->Users->patchEntity($UnidadeMedida, $this->request->getData());
-            $UnidadeMedida->Tamanho =  $this->request->getData('Tamanho', 'Nulo');
+            $UnidadeMedida = $this->UnidadeMedidas->patchEntity($UnidadeMedida, $this->request->getData());
+            $UnidadeMedida->tamanho = $this->request->getData('tamanho', 'Nulo');
             if ($this->UnidadeMedidas->save($UnidadeMedida)) {
-                $this->Flash->success(__('O usuário foi salvo.'));
+                $this->Flash->success(__('A Unidade de Medida foi salva.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('O usuário não pode ser cadastrado. Por favor, tente novamente.'));
+            $this->Flash->error(__('A Unidade de Medida não pode ser cadastrado. Por favor, tente novamente.'));
         }
         $this->set(compact('UnidadeMedida'));
     }
@@ -111,11 +107,11 @@ class UnidadeMedidasController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $UnidadeMedida = $this->UnidadeMedidas->patchEntity($UnidadeMedida, $this->request->getData());
             if ($this->UnidadeMedidas->save($UnidadeMedida)) {
-                $this->Flash->success(__('O usuário foi alterado.'));
+                $this->Flash->success(__('A Unidade de Medida foi alterada.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('O usuário não pode ser alterado. Por favor, tente novamente.'));
+            $this->Flash->error(__('A Unidade de Medida não pode ser alterada. Por favor, tente novamente.'));
         }
         $this->set(compact('UnidadeMedida'));
     }
@@ -134,9 +130,9 @@ class UnidadeMedidasController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $UnidadeMedida = $this->UnidadeMedidas->get($id);
         if ($this->UnidadeMedidas->delete($UnidadeMedida)) {
-            $this->Flash->success(__('O usuário foi deletado.'));
+            $this->Flash->success(__('A Unidade de Medida foi deletado.'));
         } else {
-            $this->Flash->error(__('O usuário não pode ser deletado. Por favor, tente novamente.'));
+            $this->Flash->error(__('A Unidade de Medida não pode ser deletada. Por favor, tente novamente.'));
         }
 
         return $this->redirect(['action' => 'index']);

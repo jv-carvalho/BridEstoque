@@ -8,7 +8,7 @@
 <nav class="large-2 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading" style="color: #518d06;"><?= __('Ações') ?></li>
-        <li style="color: #518d06;"><?= $this->Html->link(__('Adicionar Usuário'), ['action' => 'add'], array('style' => 'color: #518d06;')) ?></li>
+        <li style="color: #518d06;"><?= $this->Html->link(__('Adicionar Compra'), ['action' => 'add'], array('style' => 'color: #518d06;')) ?></li>
     </ul>
 </nav>
 <div class="fornecedor index large-10 medium-12 columns content">
@@ -22,24 +22,24 @@
         <thead>
             <tr>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>
-            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Data:') ?></th>
-            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Total Da Compra:') ?></th>
-            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Numero Documento:') ?></th>
-            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
-            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
-            <th class= "text-center" scope="col" class="actions"> <?= __('Ações') ?></th>
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('data', ['label' => 'Data:']) ?></th>
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('TotalDaCompra', ['label' => 'Total Da Compra:']) ?></th>
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('NumeroDocumento', ['label' =>'Numero Documento:']) ?></th>
+             <!-- <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th> -->
+             <!-- <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th> -->
+            <th class= "text-center" scope="col" style="color: #518d06;" class="actions"><?= __('Ações') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($compras as $compra) : ?>
                 <tr>
-                    <td><?= $this->Number->format($compra->id) ?></td>
-                    <td><?= h($compra->Data) ?></td>
-                    <td><?= h($compra->TotalDaCompra) ?></td>
-                    <td><?= h($compra->NumeroDocumento) ?></td>
-                    <td><?= h($compra->created) ?></td>
-                    <td><?= h($compra->modified) ?></td>
-                    <td class="actions">
+                    <td class= "text-center"><?= $this->Number->format($compra->id) ?></td>
+                    <td class= "text-center"><?= $compra->data->format("d/m/Y") ?></td>
+                    <td class= "text-center"><?= ($compra->TotalDaCompra) ?></td>
+                    <td class= "text-center"><?= ($compra->NumeroDocumento) ?></td>
+                    <!-- <td class= "text-center"><?= h($compra->created) ?></td> -->
+                    <!-- <td class= "text-center"><?= h($compra->modified) ?></td> -->
+                    <td class="actions text-center">
                         <?= $this->Html->link(__('Ver'), ['action' => 'view', $compra->id]) ?>
                         <?= $this->Html->link(__('Editar'), ['action' => 'edit', $compra->id]) ?>
                         <?= $this->Form->postLink(__('Apagar'), ['action' => 'delete', $compra->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $compra->id)]) ?>

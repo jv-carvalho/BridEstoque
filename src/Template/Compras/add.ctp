@@ -8,7 +8,7 @@
 <nav class="large-2 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Ações') ?></li>
-        <li><?= $this->Html->link(__('Listar Produtos'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Listar Compras'), ['action' => 'index']) ?></li>
         <li><?= $this->Form->postLink(
                 __('Deletar'),
                 ['action' => 'delete', $compra->id],
@@ -20,11 +20,11 @@
 <div class="produto form large-10 medium-8 columns content">
     <?= $this->Form->create($compra) ?>
     <fieldset>
-        <legend><?= __('Adicionar Produto') ?></legend>
+        <legend><?= __('Adicionar Compra') ?></legend>
         <?php
-        echo $this->Form->control('Data:');
-        echo $this->Form->control('Total da Compra:');
-        echo $this->Form->control('Numero Documento:');
+        echo $this->Form->control('data', ['id' => 'data', 'type' => 'date', 'class' => 'form-control date-field', 'label' => 'Data:', 'required' => true]);
+        echo $this->Form->control('TotalDaCompra', ["label" => "Total da Compra:"]);
+        echo $this->Form->control('NumeroDocumento',["label"=>"Numero Documento:", "data-slots" => "_", "placeholder" => "___.___.___-__", "required" => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Adicionar')) ?>

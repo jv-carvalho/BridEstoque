@@ -21,25 +21,25 @@
         <br/>   
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('Id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Nome') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Descrição') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Saldo') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Criado') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
-                <th scope="col" style="color: #518d06;" class="actions"><?= __('Ações') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Nome') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Descrição') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Saldo') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
+                <th class= "text-center" scope="col" style="color: #518d06;" class="actions"><?= __('Ações') ?></th>
             </tr>
         </thead>
         <tbody>
         <?php foreach ($produtos as $produto) : ?>
                 <tr>
-                    <td><?= $this->Number->format($produto->id) ?></td>
-                    <td><?= h($produto->username) ?></td>
-                    <td><?= h($produto->descrição) ?></td>
-                    <td><?= h($produto->saldo) ?></td>
-                    <td><?= h($produto->created) ?></td>
-                    <td><?= h($produto->modified) ?></td>
-                    <td class="actions">
+                    <td class= "text-center"><?= $this->Number->format($produto->id) ?></td>
+                    <td class= "text-center"><?= h($produto->username) ?></td>
+                    <td class= "text-center"><?= h($produto->descrição) ?></td>
+                    <td class= "text-center"><?= h($produto->saldo) ?></td>
+                    <td class= "text-center"><?= h($produto->created) ?></td>
+                    <td class= "text-center"><?= h($produto->modified) ?></td>
+                    <td class="actions text-center">
                     <?= $this->Html->link(__('Ver'), ['action' => 'view', $produto->id]) ?>
                         <?= $this->Html->link(__('Editar'), ['action' => 'edit', $produto->id]) ?>
                         <?= $this->Form->postLink(__('Apagar'), ['action' => 'delete', $produto->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $produto->id)]) ?>

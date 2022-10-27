@@ -3,9 +3,10 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use App\Model\Entity\Compra;
 
 /**
- * Fornecedores Controller
+ * Compras Controller
  *
  * @property \App\Model\Table\ComprasTable $Compras
  *
@@ -30,22 +31,26 @@ class ComprasController extends AppController
             ]
         ];
 
-        $compras= $this->paginate($this->Compras->find('all')->where(
+        $query = $this->Compras->find('all')->where(
             [
-                'Or' =>
                 [
-                    'TotalDaCompra like' => '%' . $key . '%'
+                    'NumeroDocumento like' => '%' . $key . '%' 
                 ]
             ]
-        ));
-
+        );
+            
+        $array = $query->toArray();
+        foreach ($array as $row) {
+            $row["data"] = $row["data"]->format("d/m/Y");
+        }
+        $compras = $this->paginate($query);
         $this->set(compact('compras'));
     }
 
     /**
      * View method
      *
-     * @param string|null $id Fornecedor id.
+     * @param string|null $id Compra id.
      * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
@@ -63,20 +68,21 @@ class ComprasController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add(){
-        
+    public function add()
+    {
         $compra = $this->Compras->newEntity();
         if ($this->request->is('post')) {
-            // $compra = $this->Fornecedor->patchEntity($compra, $this->request->getData());
-            $compra->Data =  $this->request->getData('Data:', 'Nulo');
-            $compra->TotalDaCompra =  $this->request->getData('Total Da Compra:', 'Nulo');
-            $compra->NumeroDocumento =  $this->request->getData('Numero Documento:', 'Nulo');
+            $compra = $this->Compras->patchEntity($compra, $this->request->getData());
+            $data = $this->request->getData('data', 'Nulo');
+            $compra->data =  $data['year'] . "-" . $data['month'] . "-" . $data['day'];
+            $compra->TotalDaCompra =  $this->request->getData('TotalDaCompra', 'Nulo');
+            $compra->NumeroDocumento =  $this->request->getData('NumeroDocumento', 'Nulo');
             if ($this->Compras->save($compra)) {
-                $this->Flash->success(__('O usuário foi salvo.'));
+                $this->Flash->success(__('A compra foi salva.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('O usuário não pode ser cadastrado. Por favor, tente novamente.'));
+            $this->Flash->error(__('A compra não pode ser cadastrado. Por favor, tente novamente.'));
         }
         $this->set(compact('compra'));
     }
@@ -94,13 +100,13 @@ class ComprasController extends AppController
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $compra = $this->Fornecedores->patchEntity($compra, $this->request->getData());
-            if ($this->Fornecedores->save($compra)) {
+            $compra = $this->Compras->patchEntity($compra, $this->request->getData());
+            if ($this->Compras->save($compra)) {
                 $this->Flash->success(__('O usuário foi alterado.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('O usuário não pode ser alterado. Por favor, tente novamente.'));
+            $this->Flash->error(__('A compra não pode ser alterada. Por favor, tente novamente.'));
         }
         $this->set(compact('compra'));
     }
@@ -115,11 +121,11 @@ class ComprasController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $compra = $this->Fornecedores->get($id);
-        if ($this->Fornecedores->delete($compra)) {
-            $this->Flash->success(__('O usuário foi deletado.'));
+        $compra = $this->Compras->get($id);
+        if ($this->Compras->delete($compra)) {
+            $this->Flash->success(__('A compra foi deletada.'));
         } else {
-            $this->Flash->error(__('O usuário não pode ser deletado. Por favor, tente novamente.'));
+            $this->Flash->error(__('A compra não pode ser deletada. Por favor, tente novamente.'));
         }
 
         return $this->redirect(['action' => 'index']);

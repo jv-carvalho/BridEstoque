@@ -13,7 +13,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime|null $created
  * @property \Cake\I18n\FrozenTime|null $modified
  */
-class Produto extends Entity
+class Compra extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -26,7 +26,8 @@ class Produto extends Entity
      */
     protected $_accessible = [
         'data' => true,
-        'total da compra' => true,
+        'TotalDaCompra' => true,
+        'NumeroDocumento' => true,
         'created' => true,
         'modified' => true,
     ];

@@ -84,11 +84,11 @@ class FornecedoresController extends AppController
             $fornecedor->email =  $email;
             $fornecedor->telefone =  (string)$telefone;
             if ($this->Fornecedores->save($fornecedor)) {
-                $this->Flash->success(__('O usuário foi salvo.'));
+                $this->Flash->success(__('O fornecedor foi salvo.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('O usuário não pode ser cadastrado. Por favor, tente novamente.'));
+            $this->Flash->error(__('O fornecedor não pode ser cadastrado. Por favor, tente novamente.'));
         }
         $this->set(compact('fornecedor'));
     }
@@ -112,11 +112,11 @@ class FornecedoresController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $fornecedor = $this->Fornecedores->patchEntity($fornecedor, $this->request->getData());
             if ($this->Fornecedores->save($fornecedor)) {
-                $this->Flash->success(__('O usuário foi alterado.'));
+                $this->Flash->success(__('O fornecedor foi alterado.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('O usuário não pode ser alterado. Por favor, tente novamente.'));
+            $this->Flash->error(__('O fornecedor não pode ser alterado. Por favor, tente novamente.'));
         }
         $this->set(compact('fornecedor'));
     }
@@ -133,9 +133,9 @@ class FornecedoresController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $fornecedor = $this->Fornecedores->get($id);
         if ($this->Fornecedores->delete($fornecedor)) {
-            $this->Flash->success(__('O usuário foi deletado.'));
+            $this->Flash->success(__('O fornecedor foi deletado.'));
         } else {
-            $this->Flash->error(__('O usuário não pode ser deletado. Por favor, tente novamente.'));
+            $this->Flash->error(__('O fornecedor não pode ser deletado. Por favor, tente novamente.'));
         }
 
         return $this->redirect(['action' => 'index']);
