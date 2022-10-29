@@ -33,7 +33,7 @@
         <tbody>
             <?php foreach ($ItemCompras as $ItemCompra) : ?>
                 <tr>
-                    <td class= "text-center"><?= $this->Number->format($ItemCompra->id) ?></td>
+                    <td class= "text-center"><?= $this->Number->format($ItemCompra->Id) ?></td>
                     <td class= "text-center"><?= h($ItemCompra->quantidade) ?></td>
                     <td class= "text-center"><?= h($ItemCompra->preco) ?></td>
                     <td class= "text-center"><?= h($ItemCompra->TotalItem) ?></td>

@@ -24,7 +24,7 @@
         <?php
         echo $this->Form->control('quantidade', ["label"=>"Quantidade:"]);
         echo $this->Form->control('preco', ["label"=>"Preço:"]);
-        echo $this->Form->control('TotalItem', ["label"=>"Total Itens:"]);
+        //echo $this->Form->control('TotalItem', ["label"=>"Total Itens:"]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Adicionar')) ?>

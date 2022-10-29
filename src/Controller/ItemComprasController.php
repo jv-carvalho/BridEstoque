@@ -11,8 +11,13 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class ItemComprasController extends AppController
-{
+class ItemComprasController extends AppController{
+
+    public function initialize() {
+        parent::initialize();
+
+        
+    }
     /**
      * Index method
      *
@@ -32,14 +37,8 @@ class ItemComprasController extends AppController
 
         $this->loadModel("ItemCompras");
 
-        $ItemCompras = $this->paginate($this->ItemCompras->find('all')->where(
-            [
-                'Or' =>
-                [
-                    'TotalItem like' => '%' . $key . '%'
-                ]
-            ]
-        ));
+        $ItemCompras = $this->paginate($this->ItemCompras->find('all')
+        );
         
         $this->set(compact('ItemCompras'));
     }
@@ -76,8 +75,8 @@ class ItemComprasController extends AppController
             $ItemCompra = $this->ItemCompras->patchEntity($ItemCompra, $this->request->getData());
             $ItemCompra->quantidade = $this->request->getData('quantidade', 'Nulo');
             $ItemCompra->preco = $this->request->getData('preco', 'Nulo');
-            $ItemCompra->TotalItem = $this->request->getData('TotalItem', 'Nulo');
-            //dd($ItemCompra);
+            //$ItemCompra->TotalItem = $this->request->getData('TotalItem', 'Nulo');
+            //debug($ItemCompra);
             if ($this->ItemCompras->save($ItemCompra)) {
                 $this->Flash->success(__('O Item Compra foi salvo.'));
 

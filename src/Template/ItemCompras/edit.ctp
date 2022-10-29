@@ -11,8 +11,8 @@
         <li><?= $this->Html->link(__('Listar Item Compra'), ['action' => 'index']) ?></li>
         <li><?= $this->Form->postLink(
                 __('Deletar Item Compra'),
-                ['action' => 'delete', $UnidadeMedida->id],
-                ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $UnidadeMedida->id)]
+                ['action' => 'delete', $ItemCompra->id],
+                ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $ItemCompra->id)]
             )
         ?></li>
     </ul>
@@ -24,7 +24,7 @@
         <?php
             echo $this->Form->control('quantidade', ["label"=>"Quantidade:"]);
             echo $this->Form->control('preco', ["label"=>"Preço:"]);
-            echo $this->Form->control('TotalItem', ["label"=>"Total Itens:"]);
+            //echo $this->Form->control('TotalItem', ["label"=>"Total Itens:"]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Salvar')) ?>
