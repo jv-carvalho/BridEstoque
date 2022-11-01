@@ -22,7 +22,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Data') ?></th>
-            <td><?= h($compra->data) ?></td>
+            <td><?= $compra->data->format("d/m/Y") ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Total da Compra') ?></th>

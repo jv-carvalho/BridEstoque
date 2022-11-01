@@ -30,7 +30,7 @@ class ItemComprasController extends AppController{
         $this->paginate = [
             'limit' => 5,
             'order' => [
-                'ItemCompras.id' => 'desc',
+                'ItemCompras.Id' => 'desc',
 
             ]
         ];
@@ -97,7 +97,6 @@ class ItemComprasController extends AppController{
     public function edit($id = null){
 
         $this->loadModel("ItemCompras");
-
         $ItemCompra = $this->ItemCompras->get($id, [
             'contain' => [],
         ]);

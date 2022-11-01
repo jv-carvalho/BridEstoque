@@ -7,10 +7,10 @@
 <nav class="large-2 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Ações') ?></li>
-        <li><?= $this->Html->link(__('Adicionar Produto'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('Listar Produtos'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Adicionar Compra'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Listar Compras'), ['action' => 'index']) ?></li>
         <li><?= $this->Form->postLink(
-                __('Deletar Produto'),
+                __('Deletar Compra'),
                 ['action' => 'delete', $compra->id],
                 ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $compra->id)]
             )

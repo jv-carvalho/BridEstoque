@@ -24,7 +24,7 @@
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Quantidade:') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Preço:') ?></th>
-            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Total Itens:') ?></th>
+            <!-- <th class= "text-center" scope="col"><?= $this->Paginator->sort('Total Itens:') ?></th>-->
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
             <th scope="col" style="color: #518d06;" class="actions text-center"><?= __('Ações') ?></th>
@@ -36,13 +36,13 @@
                     <td class= "text-center"><?= $this->Number->format($ItemCompra->Id) ?></td>
                     <td class= "text-center"><?= h($ItemCompra->quantidade) ?></td>
                     <td class= "text-center"><?= h($ItemCompra->preco) ?></td>
-                    <td class= "text-center"><?= h($ItemCompra->TotalItem) ?></td>
+                    <!-- <td class= "text-center"><?= h($ItemCompra->TotalItem) ?></td> -->
                     <td class= "text-center"><?= h($ItemCompra->created) ?></td>
                     <td class= "text-center"><?= h($ItemCompra->modified) ?></td>
                     <td class="actions text-center">
-                        <?= $this->Html->link(__('Ver'), ['action' => 'view', $ItemCompra->id]) ?>
-                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $ItemCompra->id]) ?>
-                        <?= $this->Form->postLink(__('Apagar'), ['action' => 'delete', $ItemCompra->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $ItemCompra->id)]) ?>
+                        <?= $this->Html->link(__('Ver'), ['action' => 'view', $ItemCompra->Id]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $ItemCompra->Id]) ?>
+                        <?= $this->Form->postLink(__('Apagar'), ['action' => 'delete', $ItemCompra->Id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $ItemCompra->Id)]) ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
