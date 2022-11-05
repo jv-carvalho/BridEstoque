@@ -76,7 +76,7 @@ class ComprasController extends AppController
             $data = $this->request->getData('data', 'Nulo');
             $compra->data =  $data['year'] . "-" . $data['month'] . "-" . $data['day'];
             $compra->TotalDaCompra =  $this->request->getData('TotalDaCompra', 'Nulo');
-            $compra->NumeroDocumento =  $this->request->getData('NumeroDocumento', 'Nulo');
+            $compra->NumeroDocumento = preg_replace('/[^0-9]/', '',$this->request->getData('NumeroDocumento', 'Nulo'));
             if ($this->Compras->save($compra)) {
                 $this->Flash->success(__('A compra foi salva.'));
 
