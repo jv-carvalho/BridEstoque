@@ -15,7 +15,7 @@
 </nav>
 <div class="fornecedor view large-10 medium-8 columns content">
     <h3><?= h($fornecedor->id) ?></h3>
-    <table class="vertical-table">
+    <table class="vertical-table table">
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($fornecedor->id) ?></td>

@@ -15,7 +15,7 @@
 </nav>
 <div class="ItemCompra view large-10 medium-8 columns content">
     <h3><?= h($ItemCompra->Id) ?></h3>
-    <table class="vertical-table">
+    <table class="vertical-table table">
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($ItemCompra->Id) ?></td>

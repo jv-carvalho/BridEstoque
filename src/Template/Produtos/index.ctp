@@ -5,19 +5,13 @@
  * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
  */
 ?>
-<nav class="large-2 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading" style="color: #518d06;"><?= __('Ações') ?></li>
-        <li style="color: #518d06;"><?= $this->Html->link(__('Adicionar Produto'), ['action' => 'add'], array('style' => 'color: #518d06;')) ?></li>
-    </ul>
-</nav>
 <div class="users index large-10 medium-12 columns content">
     <h3><?= __('Produtos') ?></h3>
     <?= $this->Form->create(null, ['type' => 'get']) ?>
     <?= $this->Form->control('key', ['label' => 'Buscar', 'value' => $this->request->getQuery('key')]) ?>
     <?= $this->Form->submit('Filtrar') ?>
     <?= $this->Form->end() ?>
-    <table cellpadding="0" cellspacing="0">
+    <table cellpadding="0" cellspacing="0" class="table">
         <br/>   
         <thead>
             <tr>
@@ -27,7 +21,7 @@
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Saldo') ?></th>
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
-                <th class= "text-center" scope="col" style="color: #518d06;" class="actions"><?= __('Ações') ?></th>
+                <th class= "text-center" scope="col" class="actions">Ações</th>
             </tr>
         </thead>
         <tbody>

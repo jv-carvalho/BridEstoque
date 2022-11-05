@@ -5,19 +5,13 @@
  * @var \App\Model\Entity\UnidadeMedida[]|\Cake\Collection\CollectionInterface $UnidadeMedidas
  */
 ?>
-<nav class="large-2 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading" style="color: #518d06;"><?= __('Ações') ?></li>
-        <li style="color: #518d06;"><?= $this->Html->link(__('Adicionar Unidade de Medida'), ['action' => 'add'], array('style' => 'color: #518d06;')) ?></li>
-    </ul>
-</nav>
 <div class="users index large-10 medium-12 columns content">
     <h3><?= __('Unidade de Medida') ?></h3>
     <?= $this->Form->create(null, ['type' => 'get']) ?>
     <?= $this->Form->control('key', ['label' => 'Buscar', 'value' => $this->request->getQuery('key')]) ?>
     <?= $this->Form->submit('Filtrar') ?>
     <?= $this->Form->end() ?>
-    <table cellpadding="0" cellspacing="0">
+    <table cellpadding="0" cellspacing="0" class="table">
         <br/>   
         <thead>
             <tr>
@@ -25,7 +19,7 @@
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Tamanho:') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
-            <th scope="col" style="color: #518d06;" class="actions text-center"><?= __('Ações') ?></th>
+            <th scope="col" class="actions text-center"><?= __('Ações') ?></th>
             </tr>
         </thead>
         <tbody>

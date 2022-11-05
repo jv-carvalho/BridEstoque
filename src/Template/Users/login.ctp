@@ -5,12 +5,6 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<nav class="large-2 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <!-- <li class="heading"><?= __('Ações') ?></li> -->
-        <!-- <li><?= $this->Html->link(__('Cadastre-se'), ['controller' => 'Users', 'action' => 'add']) ?></li> -->
-    </ul>
-</nav>
 <div class="users form large-10 medium-8 columns content">
     <?= $this->Form->create() ?>
     <fieldset>
@@ -18,7 +12,7 @@
         <?php
         echo $this->Form->input('username', ['label' => 'Nome:']);
         ?>
-        <div class="col-12 col-sm-6">
+        <div class="col-12">
           <?php
             echo $this->Form->control('password', ['autocomplete' => 'off', 'label' => 'Senha:']);
           ?>

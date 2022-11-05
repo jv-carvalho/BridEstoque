@@ -53,9 +53,11 @@ class ErrorController extends AppController
      */
     public function beforeRender(Event $event)
     {
+        $this->viewBuilder()->setTheme('AdminLTE');
         parent::beforeRender($event);
 
         $this->viewBuilder()->setTemplatePath('Error');
+        
     }
 
     /**

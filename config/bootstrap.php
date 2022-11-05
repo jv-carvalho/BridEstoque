@@ -109,3 +109,5 @@ Type::build('datetime')
     ->useImmutable();
 Type::build('timestamp')
     ->useImmutable();
+
+Configure::load('adminlte', 'default');

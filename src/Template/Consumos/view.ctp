@@ -4,18 +4,13 @@
  * @var \App\Model\Entity\Consumo $compra
  */
 ?>
-<nav class="large-2 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Ações') ?></li>
-        <li><?= $this->Html->link(__('Adicionar Consumo'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('Editar Consumo'), ['action' => 'edit', $consumo->Id]) ?> </li>
-        <li><?= $this->Html->link(__('Listar Consumo'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Form->postLink(__('Deletar Consumo'), ['action' => 'delete', $consumo->Id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $consumo->Id)]) ?> </li>
-    </ul>
-</nav>
-<div class="fornecedor view large-10 medium-8 columns content">
-    <h3><?= h($consumo->Id) ?></h3>
-    <table class="vertical-table">
+<div class="card-body pad table-responsive">
+  <button><?= $this->Html->link(__('Editar Consumo'), ['action' => 'edit', $consumo->Id]) ?></button>
+  <button><?= $this->Form->postlink(__('Deletar Consumo'), ['action' => 'delete', $consumo->Id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $consumo->Id)]) ?></button>
+</div>
+<div class="fornecedor view large-10 medium-8 columns content ">
+    <h3>Consumo <?= h($consumo->Id) ?></h3>
+    <table class="vertical-table table">
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($consumo->Id) ?></td>
