@@ -18,6 +18,8 @@
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('data', ['label' => 'Data:']) ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('quantidade', ['label' => 'Quantidade:']) ?></th>
+            <th class= "text-center" scope="col" class="actions"><?= __('Produto') ?></th>
+            <th class= "text-center" scope="col" class="actions"><?= __('Unidade Medida') ?></th>
               <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
               <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th> 
             <th class= "text-center" scope="col" class="actions"><?= __('Ações') ?></th>
@@ -29,6 +31,8 @@
                     <td class= "text-center"><?= $this->Number->format($consumo->Id) ?></td>
                     <td class= "text-center"><?= $consumo->data->format("d/m/Y") ?></td>
                     <td class= "text-center"><?= ($consumo->quantidade) ?></td>
+                    <td class= "text-center"><?= $consumo['produto'] ? $consumo['produto']['descrição'] : '' ?></td>
+                    <td class= "text-center"><?= $consumo['unidademedida'] ? $consumo['unidademedida']['tamanho'] : '' ?></td>
                     <td class= "text-center"><?= h($consumo->created) ?></td>
                     <td class= "text-center"><?= h($consumo->modified) ?></td>
                     <td class="actions text-center">

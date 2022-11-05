@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use App\Model\Entity\Consumo;
+use Cake\ORM\TableRegistry;
 
 /**
  * Compras Controller
@@ -31,7 +32,18 @@ class ConsumosController extends AppController
             ]
         ];
 
-        $query = $this->Consumos->find('all');
+        $query = $this->Consumos->find('all')->join([
+            'table' => 'produtos',
+            'alias' => 'produto',
+            'type' => 'LEFT',
+            'conditions' => 'produto.id = produto_id'
+         ])->autoFields(true)->select(["produto.descrição"])
+         ->join([
+            'table' => 'unidademedidas',
+            'alias' => 'unidademedida',
+            'type' => 'LEFT',
+            'conditions' => 'unidademedida.id = unidademedida_id'
+         ])->autoFields(true)->select(["unidademedida.tamanho"]);
             
         $array = $query->toArray();
         foreach ($array as $row) {
@@ -65,11 +77,20 @@ class ConsumosController extends AppController
     public function add()
     {
         $consumo = $this->Consumos->newEntity();
+        
+        $produtos = TableRegistry::getTableLocator()->get('produtos');
+        $produtos = $produtos->find();
+
+        $unidadesmedida = TableRegistry::getTableLocator()->get('unidademedidas');
+        $unidadesmedida = $unidadesmedida->find();
+
         if ($this->request->is('post')) {
             $consumo = $this->Consumos->patchEntity($consumo, $this->request->getData());
             $consumo->quantidade =  $this->request->getData('quantidade', 'Nulo');
             $data = $this->request->getData('data', 'Nulo');
             $consumo->data =  $data['year'] . "-" . $data['month'] . "-" . $data['day'];
+            $consumo->produto_id = (int)$this->request->getData('produto_id');
+            $consumo->unidademedida_id = (int)$this->request->getData('unidademedida_id');
             if ($this->Consumos->save($consumo)) {
                 $this->Flash->success(__('O consumo foi salvo.'));
 
@@ -77,7 +98,7 @@ class ConsumosController extends AppController
             }
             $this->Flash->error(__('O consumo não pode ser cadastrado. Por favor, tente novamente.'));
         }
-        $this->set(compact('consumo'));
+        $this->set(compact('consumo', 'produtos', 'unidadesmedida'));
     }
 
     /**
@@ -92,6 +113,13 @@ class ConsumosController extends AppController
         $consumo = $this->Consumos->get($id, [
             'contain' => [],
         ]);
+
+        $produtos = TableRegistry::getTableLocator()->get('produtos');
+        $produtos = $produtos->find();
+
+        $unidadesmedida = TableRegistry::getTableLocator()->get('unidademedidas');
+        $unidadesmedida = $unidadesmedida->find();
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $consumo = $this->Consumos->patchEntity($consumo, $this->request->getData());
             if ($this->Consumos->save($consumo)) {
@@ -101,7 +129,7 @@ class ConsumosController extends AppController
             }
             $this->Flash->error(__('O consumo não pode ser alterada. Por favor, tente novamente.'));
         }
-        $this->set(compact('consumo'));
+        $this->set(compact('consumo', 'produtos', 'unidadesmedida'));
     }
 
     /**
