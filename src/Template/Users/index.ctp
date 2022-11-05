@@ -21,7 +21,7 @@
         <br/>   
         <thead>
             <tr>
-                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>
+                <!-- <th class= "text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>-->
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Nome') ?></th>
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Setor') ?></th>
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Cargo') ?></th>
@@ -33,7 +33,7 @@
         <tbody>
             <?php foreach ($users as $user) : ?>
                 <tr>
-                    <td class= "text-center"><?= $this->Number->format($user->id) ?></td>
+                    <!--<td class= "text-center"><?= $this->Number->format($user->id) ?></td>-->
                     <td class= "text-center"><?= h($user->username) ?></td>
                     <td class= "text-center"><?= h($user->Setor) ?></td>
                     <td class= "text-center"><?= h($user->role) ?></td>

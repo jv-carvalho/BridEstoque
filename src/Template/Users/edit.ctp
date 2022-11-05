@@ -24,7 +24,7 @@
         ?>
         <div class="col-12 col-sm-6">
           <?php
-            echo $this->Form->control('password', ['value' => hash('adler32', 'bridestoque'.(string)rand(1, 9999)), 'label' => 'Senha:']);
+            echo $this->Form->control('password', ['autocomplete' => 'off', 'label' => 'Senha:']);
           ?>
           <div class="users form large-10 medium-8 columns content">
             <input type="checkbox" onclick="myFunction()"> Exibir Senha

@@ -24,10 +24,10 @@
             <th scope="row"><?= __('Nome') ?></th>
             <td><?= h($user->username) ?></td>
         </tr>
-        <tr>
+        <!-- <tr>
             <th scope="row"><?= __('Senha') ?></th>
             <td><?= h($user->password) ?></td>
-        </tr>
+        </tr>-->
         <tr>
             <th scope="row"><?= __('Setor') ?></th>
             <td><?= h($user->Setor) ?></td>
