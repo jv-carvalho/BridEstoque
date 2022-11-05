@@ -7,8 +7,8 @@
 ?>
 <nav class="large-2 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Ações') ?></li>
-        <li><?= $this->Html->link(__('Novo Usuário'), ['controller' => 'Users', 'action' => 'add']) ?></li>
+        <!-- <li class="heading"><?= __('Ações') ?></li> -->
+        <!-- <li><?= $this->Html->link(__('Cadastre-se'), ['controller' => 'Users', 'action' => 'add']) ?></li> -->
     </ul>
 </nav>
 <div class="users form large-10 medium-8 columns content">
@@ -20,10 +20,10 @@
         ?>
         <div class="col-12 col-sm-6">
           <?php
-            echo $this->Form->input('password', ['value' => hash('adler32', 'bridestoque'.(string)rand(1, 9999)), 'label' => 'Senha:']);
+            echo $this->Form->control('password', ['autocomplete' => 'off', 'label' => 'Senha:']);
           ?>
-          <div class="users form large-10 medium-8 columns content">
-            <input type="checkbox" onclick="myFunction()"> Exibir Senha
+          <div class="users form">
+            <input type="checkbox" id="exibesenha" onclick="myFunction()"> <label for="exibesenha">Exibir Senha</label>
           </div>
           <script>
             function myFunction() {
