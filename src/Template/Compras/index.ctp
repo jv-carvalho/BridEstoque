@@ -36,7 +36,7 @@
                     <td class= "text-center"><?= $this->Number->format($compra->id) ?></td>
                     <td class= "text-center"><?= $compra->data->format("d/m/Y") ?></td>
                     <td class= "text-center"><?= ($compra->TotalDaCompra) ?></td>
-                    <td class= "text-center"><?= ($compra->NumeroDocumento) ?></td>
+                    <td class= "text-center"><?= formataNumeroDocumento($compra->NumeroDocumento) ?></td>
                     <!-- <td class= "text-center"><?= h($compra->created) ?></td> -->
                     <!-- <td class= "text-center"><?= h($compra->modified) ?></td> -->
                     <td class="actions text-center">
@@ -59,3 +59,14 @@
         <p><?= $this->Paginator->counter(['format' => __('Página {{page}} de {{pages}}, mostrado {{current}} registro(s) do total de {{count}}.')]) ?></p>
     </div>
 </div>
+
+<?php
+function formataNumeroDocumento($document){
+    $formatedNumDocument = 11;
+    $cnpj_cpf = preg_replace("/\D/", '', $document);
+    if (strlen($cnpj_cpf) === $formatedNumDocument) {
+        return preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "\$1.\$2.\$3-\$4", $cnpj_cpf);
+      } 
+      
+      return preg_replace("/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/", "\$1.\$2.\$3/\$4-\$5", $cnpj_cpf);
+    }
