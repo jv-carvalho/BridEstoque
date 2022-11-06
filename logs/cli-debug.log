@@ -1,0 +1,104 @@
+2022-11-06 16:10:14 Notice: Deprecated (16384): You no longer need to call `Plugin::routes()` after upgrading to use Http\Server. See https://book.cakephp.org/3/en/development/application.html#adding-the-new-http-stack-to-an-existing-application for upgrade information. - C:\Dev\BridEstoque\config\routes.php, line: 31
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+deprecationWarning - CORE\src\Core\functions.php, line 311
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 318
+require - ROOT\config\routes.php, line 31
+Cake\Http\BaseApplication::routes() - CORE\src\Http\BaseApplication.php, line 178
+Cake\Console\CommandRunner::loadRoutes() - CORE\src\Console\CommandRunner.php, line 420
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 146
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2022-11-06 16:10:14 Notice: Deprecated (16384): You no longer need to call `Plugin::routes()` after upgrading to use Http\Server. See https://book.cakephp.org/3/en/development/application.html#adding-the-new-http-stack-to-an-existing-application for upgrade information. - C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\Plugin.php, line: 322
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+deprecationWarning - CORE\src\Core\functions.php, line 311
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 318
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 322
+require - ROOT\config\routes.php, line 31
+Cake\Http\BaseApplication::routes() - CORE\src\Http\BaseApplication.php, line 178
+Cake\Console\CommandRunner::loadRoutes() - CORE\src\Console\CommandRunner.php, line 420
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 146
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2022-11-06 16:10:14 Notice: Deprecated (16384): You no longer need to call `Plugin::routes()` after upgrading to use Http\Server. See https://book.cakephp.org/3/en/development/application.html#adding-the-new-http-stack-to-an-existing-application for upgrade information. - C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\Plugin.php, line: 322
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+deprecationWarning - CORE\src\Core\functions.php, line 311
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 318
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 322
+require - ROOT\config\routes.php, line 31
+Cake\Http\BaseApplication::routes() - CORE\src\Http\BaseApplication.php, line 178
+Cake\Console\CommandRunner::loadRoutes() - CORE\src\Console\CommandRunner.php, line 420
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 146
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2022-11-06 16:10:14 Notice: Deprecated (16384): You no longer need to call `Plugin::routes()` after upgrading to use Http\Server. See https://book.cakephp.org/3/en/development/application.html#adding-the-new-http-stack-to-an-existing-application for upgrade information. - C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\Plugin.php, line: 322
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+deprecationWarning - CORE\src\Core\functions.php, line 311
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 318
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 322
+require - ROOT\config\routes.php, line 31
+Cake\Http\BaseApplication::routes() - CORE\src\Http\BaseApplication.php, line 178
+Cake\Console\CommandRunner::loadRoutes() - CORE\src\Console\CommandRunner.php, line 420
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 146
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2022-11-06 16:10:14 Notice: Deprecated (16384): You no longer need to call `Plugin::routes()` after upgrading to use Http\Server. See https://book.cakephp.org/3/en/development/application.html#adding-the-new-http-stack-to-an-existing-application for upgrade information. - C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\Plugin.php, line: 322
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+deprecationWarning - CORE\src\Core\functions.php, line 311
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 318
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 322
+require - ROOT\config\routes.php, line 31
+Cake\Http\BaseApplication::routes() - CORE\src\Http\BaseApplication.php, line 178
+Cake\Console\CommandRunner::loadRoutes() - CORE\src\Console\CommandRunner.php, line 420
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 146
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2022-11-06 16:10:14 Notice: Deprecated (16384): You no longer need to call `Plugin::routes()` after upgrading to use Http\Server. See https://book.cakephp.org/3/en/development/application.html#adding-the-new-http-stack-to-an-existing-application for upgrade information. - C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\Plugin.php, line: 322
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+deprecationWarning - CORE\src\Core\functions.php, line 311
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 318
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 322
+require - ROOT\config\routes.php, line 31
+Cake\Http\BaseApplication::routes() - CORE\src\Http\BaseApplication.php, line 178
+Cake\Console\CommandRunner::loadRoutes() - CORE\src\Console\CommandRunner.php, line 420
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 146
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2022-11-06 16:10:14 Notice: Deprecated (16384): You no longer need to call `Plugin::routes()` after upgrading to use Http\Server. See https://book.cakephp.org/3/en/development/application.html#adding-the-new-http-stack-to-an-existing-application for upgrade information. - C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\Plugin.php, line: 322
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\Core\functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+deprecationWarning - CORE\src\Core\functions.php, line 311
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 318
+Cake\Core\Plugin::routes() - CORE\src\Core\Plugin.php, line 322
+require - ROOT\config\routes.php, line 31
+Cake\Http\BaseApplication::routes() - CORE\src\Http\BaseApplication.php, line 178
+Cake\Console\CommandRunner::loadRoutes() - CORE\src\Console\CommandRunner.php, line 420
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 146
+[main] - ROOT\bin\cake.php, line 12
+
+
+

@@ -66,25 +66,10 @@ class ProdutosTable extends Table
             ->NotEmpty('Descrição', 'Necessário preencher o campo senha');
 
         $validator
-            ->scalar('Saldo')
-            ->maxLength('Saldo', 255)
+            ->scalar('saldo')
             ->requirePresence('Saldo', 'create')
             ->NotEmpty('saldo', 'Necessário preencher o campo setor');
 
         return $validator;
-    }
-
-    /**
-     * Returns a rules checker object that will be used for validating
-     * application integrity.
-     *
-     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
-     * @return \Cake\ORM\RulesChecker
-     */
-    public function buildRules(RulesChecker $rules)
-    {
-        $rules->add($rules->isUnique(['username']));
-
-        return $rules;
     }
 }

@@ -24,7 +24,7 @@
         <?php
         echo $this->Form->control('data', ['id' => 'data', 'type' => 'date', 'class' => 'form-control date-field', 'label' => 'Data:', 'required' => true]);
         echo $this->Form->control('TotalDaCompra', ["label" => "Total da Compra:"]);
-        echo $this->Form->control('NumeroDocumento',["label"=>"Numero Documento:", "data-slots" => "_", "placeholder" => "___.___.___-__", "required" => true]);
+        echo $this->Form->control('NumeroDocumento',["label"=>"Numero Documento:", "data-slots" => "_", "placeholder" => "___.___.___-__", "required" => true, ]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Adicionar')) ?>

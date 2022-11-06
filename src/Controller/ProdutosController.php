@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Produtos Controller
@@ -30,7 +31,12 @@ class ProdutosController extends AppController
             ]
         ];
 
-        $produtos = $this->paginate($this->Produtos->find('all')->where(
+        $produtos = $this->paginate($this->Produtos->find('all')->join([
+            'table' => 'unidademedidas',
+            'alias' => 'unidademedida',
+            'type' => 'LEFT',
+            'conditions' => 'unidademedida.id = unidademedida_id'
+        ])->autoFields(true)->select(["unidademedida.tamanho"])->where(
             [
                 'Or' =>
                 [
@@ -40,10 +46,6 @@ class ProdutosController extends AppController
                 [
                     'descrição like' => '%' . $key . '%'
                 ],
-                'Or' =>
-                [
-                    'saldo like' => '%' . $key . '%'
-                ]
             ]
         ));
 
@@ -71,14 +73,17 @@ class ProdutosController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add(){
+    public function add()
+    {
+        $unidadesmedida = TableRegistry::getTableLocator()->get('unidademedidas');
+        $unidadesmedida = $unidadesmedida->find();
 
         $produto = $this->Produtos->newEntity();
         if ($this->request->is('post')) {
-            // $produto = $this->Produto->patchEntity($produto, $this->request->getData());
             $produto->username =  $this->request->getData('Nome', 'Nulo');
             $produto->descrição =  $this->request->getData('Descrição', 'Nulo');
-            $produto->saldo =  $this->request->getData('Saldo', 'Nulo');
+            $produto->saldo =  $this->request->getData('saldo', 'Nulo');
+            $produto->unidademedida_id = (int)$this->request->getData('unidademedida_id');
             if ($this->Produtos->save($produto)) {
                 $this->Flash->success(__('O produto foi salvo.'));
 
@@ -86,7 +91,7 @@ class ProdutosController extends AppController
             }
             $this->Flash->error(__('O produto não pode ser cadastrado. Por favor, tente novamente.'));
         }
-        $this->set(compact('produto'));
+        $this->set(compact('produto', 'unidadesmedida'));
     }
 
     /**
@@ -101,8 +106,14 @@ class ProdutosController extends AppController
         $produto = $this->Produtos->get($id, [
             'contain' => [],
         ]);
+
+        $unidadesmedida = TableRegistry::getTableLocator()->get('unidademedidas');
+        $unidadesmedida = $unidadesmedida->find();
+
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $produto = $this->Produtos->patchEntity($produto, $this->request->getData());
+            $dados =  $this->request->getData();
+            $dados['unidademedida_id'] = (int)$this->request->getData('unidademedida_id');
+            $produto = $this->Produtos->patchEntity($produto, $dados);
             if ($this->Produtos->save($produto)) {
                 $this->Flash->success(__('O produto foi alterado.'));
 
@@ -110,7 +121,7 @@ class ProdutosController extends AppController
             }
             $this->Flash->error(__('O produto não pode ser alterado. Por favor, tente novamente.'));
         }
-        $this->set(compact('produto'));
+        $this->set(compact('produto', 'unidadesmedida'));
     }
 
     /**

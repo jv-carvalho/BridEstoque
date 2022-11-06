@@ -19,7 +19,7 @@
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('data', ['label' => 'Data:']) ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('quantidade', ['label' => 'Quantidade:']) ?></th>
             <th class= "text-center" scope="col" class="actions"><?= __('Produto') ?></th>
-            <th class= "text-center" scope="col" class="actions"><?= __('Unidade Medida') ?></th>
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Unidade Medida') ?></th>
               <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
               <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th> 
             <th class= "text-center" scope="col" class="actions"><?= __('Ações') ?></th>

@@ -21,13 +21,6 @@
             $produtos_list[$value->id] = $value->descrição;
         }
         echo $this->Form->control('produto_id', ['id' => 'produto', 'label' => 'Produto:', 'options' => $produtos_list, 'empty' => true]);
-
-        $unidadesmedida_list = [];
-        foreach ($unidadesmedida as $value) {
-            $unidadesmedida_list[$value->id] = $value->tamanho;
-        }
-
-        echo $this->Form->control('unidademedida_id', ['id' => 'unidademedida', 'label' => 'Unidade Medida:', 'options' => $unidadesmedida_list, 'empty' => true]);
         ?>
 
     </fieldset>

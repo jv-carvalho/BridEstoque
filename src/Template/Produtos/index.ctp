@@ -19,6 +19,7 @@
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Nome') ?></th>
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Descrição') ?></th>
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Saldo') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Unidade Medida') ?></th>
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
                 <th class= "text-center" scope="col" class="actions">Ações</th>
@@ -31,6 +32,7 @@
                     <td class= "text-center"><?= h($produto->username) ?></td>
                     <td class= "text-center"><?= h($produto->descrição) ?></td>
                     <td class= "text-center"><?= h($produto->saldo) ?></td>
+                    <td class= "text-center"><?= $produto['unidademedida'] ? $produto['unidademedida']['tamanho'] : '' ?></td>
                     <td class= "text-center"><?= h($produto->created) ?></td>
                     <td class= "text-center"><?= h($produto->modified) ?></td>
                     <td class="actions text-center">
