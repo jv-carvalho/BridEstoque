@@ -47,7 +47,6 @@ class ItemComprasTable extends Table
 
         $validator
             ->scalar('preco')
-            ->maxLength('preco', 255)
             ->requirePresence('preco', 'create')
             ->NotEmpty('preco', 'Necessário preencher o campo senha');
 
