@@ -82,7 +82,7 @@ class ProdutosController extends AppController
         if ($this->request->is('post')) {
             $produto->username =  $this->request->getData('Nome', 'Nulo');
             $produto->descrição =  $this->request->getData('Descrição', 'Nulo');
-            $produto->saldo =  $this->request->getData('saldo', 'Nulo');
+            // $produto->saldo =  $this->request->getData('saldo', 'Nulo');
             $produto->unidademedida_id = (int)$this->request->getData('unidademedida_id');
             if ($this->Produtos->save($produto)) {
                 $this->Flash->success(__('O produto foi salvo.'));

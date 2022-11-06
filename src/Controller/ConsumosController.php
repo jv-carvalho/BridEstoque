@@ -82,10 +82,22 @@ class ConsumosController extends AppController
 
         if ($this->request->is('post')) {
             $consumo = $this->Consumos->patchEntity($consumo, $this->request->getData());
-            $consumo->quantidade =  $this->request->getData('quantidade', 'Nulo');
+            $consumo->quantidade =  $this->request->getData('quantidade', 0);
             $data = $this->request->getData('data', 'Nulo');
             $consumo->data =  $data['year'] . "-" . $data['month'] . "-" . $data['day'];
             $consumo->produto_id = (int)$this->request->getData('produto_id');
+            $consumo->tipo_entrada = (int)$this->request->getData('tipo_entrada');
+
+            // $produtosTable = TableRegistry::getTableLocator()->get('produtos');
+            // $produto = $produtosTable->get($consumo->produto_id);
+            // if ($consumo->tipo_entrada == 0) {
+            //     $produto->saldo = $produto->saldo - (float)$consumo->quantidade;
+            //     $produtosTable->save($produto);
+            // } else if ($consumo->tipo_entrada == 1) {
+            //     $produto->saldo = $produto->saldo + (float)$consumo->quantidade;
+            //     $produtosTable->save($produto);
+            // }
+
             if ($this->Consumos->save($consumo)) {
                 $this->Flash->success(__('O consumo foi salvo.'));
 

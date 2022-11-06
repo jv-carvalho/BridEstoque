@@ -12,7 +12,7 @@
         <?php
         echo $this->Form->control('username', ["label" => "Nome"]);
         echo $this->Form->control('descrição', ["label" => "Descrição"]);
-        echo $this->Form->control('saldo', ["label" => "Saldo"]);
+        // echo $this->Form->control('saldo', ["label" => "Saldo"]);
 
 
         $unidadesmedida_list = [];
