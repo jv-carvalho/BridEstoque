@@ -1,4 +1,5 @@
 <ul class="sidebar-menu" data-widget="tree">
+    <li class="header"><h5>Bem vindo, <?= $username ?>!</h5></li>
     <li class="header">NAVEGAÇÃO</li>
     <li class="treeview">
         <a href="#">

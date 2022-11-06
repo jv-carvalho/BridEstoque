@@ -42,7 +42,22 @@ class ConsumosController extends AppController
             'alias' => 'unidademedida',
             'type' => 'LEFT',
             'conditions' => 'unidademedida.id = produto.unidademedida_id'
-        ])->autoFields(true)->select(["unidademedida.tamanho"]);
+        ])->autoFields(true)->select(["unidademedida.tamanho"])->where(
+            [
+                'Or' =>
+                [
+                    [
+                        'produto.descrição like' => '%' . $key . '%'
+                    ],
+                    [
+                        'unidademedida.tamanho like' => '%' . $key . '%'
+                    ],
+                    [
+                        'consumos.quantidade' =>  $key
+                    ]
+                ],
+            ]
+        );
 
         $array = $query->toArray();
         foreach ($array as $row) {
