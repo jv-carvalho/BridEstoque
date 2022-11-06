@@ -5,18 +5,6 @@
  * @var \App\Model\Entity\ItemCompra $ItemCompra
  */
 ?>
-<nav class="large-2 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Ações') ?></li>
-        <li><?= $this->Html->link(__('Listar Item Compra'), ['action' => 'index']) ?></li>
-        <li><?= $this->Form->postLink(
-                __('Deletar'),
-                ['action' => 'delete', $ItemCompra->id],
-                ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $ItemCompra->id)]
-            )
-            ?></li>
-    </ul>
-</nav>
 <div class="Item Compra form large-10 medium-8 columns content">
     <?= $this->Form->create($ItemCompra) ?>
     <fieldset>

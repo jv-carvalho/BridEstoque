@@ -4,15 +4,10 @@
  * @var \App\Model\Entity\UnidadeMedida $UnidadeMedida
  */
 ?>
-<nav class="large-2 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Ações') ?></li>
-        <li><?= $this->Html->link(__('Adicionar Unidade de Medida'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('Editar Unidade de Medida'), ['action' => 'edit', $UnidadeMedida->id]) ?> </li>
-        <li><?= $this->Html->link(__('Listar Unidade de Medida'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Form->postLink(__('Deletar Unidade de Medida'), ['action' => 'delete', $UnidadeMedida->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $UnidadeMedida->id)]) ?> </li>
-    </ul>
-</nav>
+<div class="card-body pad table-responsive">
+  <button><?= $this->Html->link(__('Editar Unidade Medida'), ['action' => 'edit', $UnidadeMedida->id]) ?></button>
+  <button><?= $this->Form->postlink(__('Deletar  Unidade Medida'), ['action' => 'delete', $UnidadeMedida->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $UnidadeMedida->id)]) ?></button>
+</div>
 <div class="UnidadeMedida view large-10 medium-8 columns content">
     <h3><?= h($UnidadeMedida->id) ?></h3>
     <table class="vertical-table table">

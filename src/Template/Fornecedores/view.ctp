@@ -4,15 +4,10 @@
  * @var \App\Model\Entity\Fornecedor $fornecedor
  */
 ?>
-<nav class="large-2 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Ações') ?></li>
-        <li><?= $this->Html->link(__('Adicionar Fornecedor'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('Editar Fornecedor'), ['action' => 'edit', $fornecedor->id]) ?> </li>
-        <li><?= $this->Html->link(__('Listar Fornecedores'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Form->postLink(__('Deletar Fornecedor'), ['action' => 'delete', $fornecedor->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $fornecedor->id)]) ?> </li>
-    </ul>
-</nav>
+<div class="card-body pad table-responsive">
+  <button><?= $this->Html->link(__('Editar Fornecedor'), ['action' => 'edit', $fornecedor->id]) ?></button>
+  <button><?= $this->Form->postlink(__('Deletar Fornecedor'), ['action' => 'delete', $fornecedor->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $fornecedor->id)]) ?></button>
+</div>
 <div class="fornecedor view large-10 medium-8 columns content">
     <h3><?= h($fornecedor->id) ?></h3>
     <table class="vertical-table table">

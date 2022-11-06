@@ -4,15 +4,10 @@
  * @var \App\Model\Entity\ItemCompra $ItemCompra
  */
 ?>
-<nav class="large-2 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Ações') ?></li>
-        <li><?= $this->Html->link(__('Adicionar Item Compra'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('Editar Item Compra'), ['action' => 'edit', $ItemCompra->Id]) ?> </li>
-        <li><?= $this->Html->link(__('Listar Item Compra'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Form->postLink(__('Deletar Item Compra'), ['action' => 'delete', $ItemCompra->Id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $ItemCompra->Id)]) ?> </li>
-    </ul>
-</nav>
+<div class="card-body pad table-responsive">
+  <button><?= $this->Html->link(__('Editar Item Compra'), ['action' => 'edit', $ItemCompra->Id]) ?></button>
+  <button><?= $this->Form->postlink(__('Deletar Item Compra'), ['action' => 'delete', $ItemCompra->Id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $ItemCompra->Id)]) ?></button>
+</div>
 <div class="ItemCompra view large-10 medium-8 columns content">
     <h3><?= h($ItemCompra->Id) ?></h3>
     <table class="vertical-table table">

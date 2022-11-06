@@ -4,15 +4,10 @@
  * @var \App\Model\Entity\Compra $compra
  */
 ?>
-<nav class="large-2 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Ações') ?></li>
-        <li><?= $this->Html->link(__('Adicionar Compra'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('Editar Compra'), ['action' => 'edit', $compra->id]) ?> </li>
-        <li><?= $this->Html->link(__('Listar Compras'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Form->postLink(__('Deletar Compra'), ['action' => 'delete', $compra->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $compra->id)]) ?> </li>
-    </ul>
-</nav>
+<div class="card-body pad table-responsive">
+  <button><?= $this->Html->link(__('Editar Compra'), ['action' => 'edit', $compra->id]) ?></button>
+  <button><?= $this->Form->postlink(__('Deletar Compra'), ['action' => 'delete', $compra->id], ['confirm' => __('Você tem certeza que deseja deletar #{0}?', $compra->id)]) ?></button>
+</div>
 <div class="fornecedor view large-10 medium-8 columns content">
     <h3><?= h($compra->id) ?></h3>
     <table class="vertical-table table">
