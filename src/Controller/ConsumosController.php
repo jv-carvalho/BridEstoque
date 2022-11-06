@@ -155,4 +155,46 @@ class ConsumosController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function relacaoconsumo()
+    {
+        $produto_id = $this->request->getQuery('produto_id');
+
+        $consumos = [];
+        if ($produto_id) {
+            $query = $this->Consumos->find('all')->join([
+                'table' => 'produtos',
+                'alias' => 'produto',
+                'type' => 'LEFT',
+                'conditions' => 'produto.id = produto_id'
+            ])->autoFields(true)->select(["produto.descrição"])->join([
+                'table' => 'unidademedidas',
+                'alias' => 'unidademedida',
+                'type' => 'LEFT',
+                'conditions' => 'unidademedida.id = produto.unidademedida_id'
+            ])->autoFields(true)->select(["unidademedida.tamanho"])->where(
+                [
+                    'produto_id' => $produto_id
+                ]
+            );
+
+            $consumos = $query->toArray();
+        }
+
+        $produtos = TableRegistry::getTableLocator()->get('produtos');
+        $produtos = $produtos->find();
+
+        $saldo_final = 0;
+        foreach ($consumos as $consumo) {
+            if ($consumo->tipo_entrada == 1) {
+                $saldo_final += $consumo->quantidade;
+            }
+
+            if ($consumo->tipo_entrada == 0) {
+                $saldo_final -= $consumo->quantidade;
+            }
+        }
+
+        $this->set(compact('produtos', 'consumos', 'saldo_final'));
+    }
 }

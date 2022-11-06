@@ -20,6 +20,7 @@
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('quantidade', ['label' => 'Quantidade:']) ?></th>
             <th class= "text-center" scope="col" class="actions"><?= __('Produto') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Unidade Medida') ?></th>
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Tipo') ?></th>
               <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
               <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th> 
             <th class= "text-center" scope="col" class="actions"><?= __('Ações') ?></th>
@@ -33,6 +34,7 @@
                     <td class= "text-center"><?= ($consumo->quantidade) ?></td>
                     <td class= "text-center"><?= $consumo['produto'] ? $consumo['produto']['descrição'] : '' ?></td>
                     <td class= "text-center"><?= $consumo['unidademedida'] ? $consumo['unidademedida']['tamanho'] : '' ?></td>
+                    <td class="text-center"><?= $consumo->tipo_entrada == 0 ? 'Saída' : 'Entrada' ?></td>
                     <td class= "text-center"><?= h($consumo->created) ?></td>
                     <td class= "text-center"><?= h($consumo->modified) ?></td>
                     <td class="actions text-center">

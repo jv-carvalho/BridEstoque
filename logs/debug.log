@@ -15765,3 +15765,714 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
 
 
 
+2022-11-06 17:04:43 Notice: Notice (8): Undefined variable: consumos in [C:\Dev\BridEstoque\src\Template\Consumos\relacaoconsumo.ctp, line 33]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 33
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:04:43 Notice: Notice (8): Undefined index: pageCount in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 1062]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::first() - CORE\src\View\Helper\PaginatorHelper.php, line 1062
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 53
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:04:43 Notice: Notice (8): Undefined index: pageCount in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 807]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::numbers() - CORE\src\View\Helper\PaginatorHelper.php, line 807
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 55
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:04:43 Notice: Notice (8): Undefined index: pageCount in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 1122]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::last() - CORE\src\View\Helper\PaginatorHelper.php, line 1122
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 57
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:04:43 Notice: Notice (8): Undefined index: pageCount in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 733]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 733
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 59
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:04:43 Notice: Notice (8): Undefined index: page in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 747]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 747
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 59
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:04:43 Notice: Notice (8): Undefined index: current in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 749]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 749
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 59
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:04:43 Notice: Notice (8): Undefined index: count in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 750]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 750
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 59
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:04:43 Notice: Notice (8): Undefined index: start in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 751]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 751
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 59
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:04:43 Notice: Notice (8): Undefined index: end in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 752]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 752
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 59
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:06:00 Notice: Notice (8): Undefined variable: consumos in [C:\Dev\BridEstoque\src\Template\Consumos\relacaoconsumo.ctp, line 38]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 38
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:06:00 Notice: Notice (8): Undefined index: pageCount in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 1062]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::first() - CORE\src\View\Helper\PaginatorHelper.php, line 1062
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 58
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:06:00 Notice: Notice (8): Undefined index: pageCount in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 807]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::numbers() - CORE\src\View\Helper\PaginatorHelper.php, line 807
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 60
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:06:00 Notice: Notice (8): Undefined index: pageCount in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 1122]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::last() - CORE\src\View\Helper\PaginatorHelper.php, line 1122
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 62
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:06:00 Notice: Notice (8): Undefined index: pageCount in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 733]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 733
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:06:00 Notice: Notice (8): Undefined index: page in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 747]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 747
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:06:00 Notice: Notice (8): Undefined index: current in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 749]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 749
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:06:00 Notice: Notice (8): Undefined index: count in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 750]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 750
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:06:00 Notice: Notice (8): Undefined index: start in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 751]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 751
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:06:00 Notice: Notice (8): Undefined index: end in [C:\Dev\BridEstoque\vendor\cakephp\cakephp\src\View\Helper\PaginatorHelper.php, line 752]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+Cake\View\Helper\PaginatorHelper::counter() - CORE\src\View\Helper\PaginatorHelper.php, line 752
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+
+2022-11-06 17:07:40 Notice: Notice (8): Undefined variable: consumos in [C:\Dev\BridEstoque\src\Template\Consumos\relacaoconsumo.ctp, line 33]
+Request URL: /consumos/relacaoconsumo
+Referer URL: http://localhost:8765/consumos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 43
+include - APP/Template\Consumos\relacaoconsumo.ctp, line 33
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1420
+Cake\View\View::_render() - CORE\src\View\View.php, line 1381
+Cake\View\View::render() - CORE\src\View\View.php, line 879
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 795
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 234
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 124
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 170
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 96
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 97
+[main] - ROOT\webroot\index.php, line 40
+
+
+

@@ -22,6 +22,7 @@
         <ul class="treeview-menu">
             <li><a href="<?php echo $this->Url->build('/consumos'); ?>"><i class="fa fa-circle-o"></i> Listar Consumos </a></li>
             <li><a href="<?php echo $this->Url->build('/consumos/add'); ?>"><i class="fa fa-circle-o"></i> Adicionar Consumo </a></li>
+            <li><a href="<?php echo $this->Url->build('/consumos/relacaoconsumo'); ?>"><i class="fa fa-circle-o"></i> Relação de Consumo </a></li>
         </ul>
     </li>
 

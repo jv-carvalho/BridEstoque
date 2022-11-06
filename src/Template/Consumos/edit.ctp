@@ -20,6 +20,14 @@
             $produtos_list[$value->id] = $value->descrição;
         }
         echo $this->Form->control('produto_id', ['id' => 'produto', 'label' => 'Produto:', 'options' => $produtos_list, 'empty' => true]);
+
+        
+        $tipo_entradas_list = [
+            0 => 'Saída',
+            1 => 'Entrada',
+        ];
+
+        echo $this->Form->control('tipo_entrada', ['id' => 'produto', 'label' => 'Tipo de Movimentação:', 'options' => $tipo_entradas_list, 'empty' => false]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Salvar')) ?>
