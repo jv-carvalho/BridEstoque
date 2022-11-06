@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use App\Model\Entity\Compra;
+use Cake\ORM\TableRegistry;
 
 /**
  * Compras Controller
@@ -34,11 +35,11 @@ class ComprasController extends AppController
         $query = $this->Compras->find('all')->where(
             [
                 [
-                    'NumeroDocumento like' => '%' . $key . '%' 
+                    'NumeroDocumento like' => '%' . $key . '%'
                 ]
             ]
         );
-            
+
         $array = $query->toArray();
         foreach ($array as $row) {
             $row["data"] = $row["data"]->format("d/m/Y");
@@ -70,13 +71,18 @@ class ComprasController extends AppController
      */
     public function add()
     {
+        $fornecedores = TableRegistry::getTableLocator()->get('fornecedores');
+        $fornecedores = $fornecedores->find();
+
+
         $compra = $this->Compras->newEntity();
         if ($this->request->is('post')) {
             $compra = $this->Compras->patchEntity($compra, $this->request->getData());
             $data = $this->request->getData('data', 'Nulo');
             $compra->data =  $data['year'] . "-" . $data['month'] . "-" . $data['day'];
             $compra->TotalDaCompra =  $this->request->getData('TotalDaCompra', 'Nulo');
-            $compra->NumeroDocumento = preg_replace('/[^0-9]/', '',$this->request->getData('NumeroDocumento', 'Nulo'));
+            $compra->NumeroDocumento = preg_replace('/[^0-9]/', '', $this->request->getData('NumeroDocumento', 'Nulo'));
+            $compra->fornecedor_id = $this->request->getData('fornecedor_id');
             if ($this->Compras->save($compra)) {
                 $this->Flash->success(__('A compra foi salva.'));
 
@@ -84,7 +90,7 @@ class ComprasController extends AppController
             }
             $this->Flash->error(__('A compra não pode ser cadastrado. Por favor, tente novamente.'));
         }
-        $this->set(compact('compra'));
+        $this->set(compact('compra', 'fornecedores'));
     }
 
     /**
@@ -96,6 +102,10 @@ class ComprasController extends AppController
      */
     public function edit($id = null)
     {
+        $fornecedores = TableRegistry::getTableLocator()->get('fornecedores');
+        $fornecedores = $fornecedores->find();
+
+
         $compra = $this->Compras->get($id, [
             'contain' => [],
         ]);
@@ -108,7 +118,7 @@ class ComprasController extends AppController
             }
             $this->Flash->error(__('A compra não pode ser alterada. Por favor, tente novamente.'));
         }
-        $this->set(compact('compra'));
+        $this->set(compact('compra', 'fornecedores'));
     }
 
     /**
