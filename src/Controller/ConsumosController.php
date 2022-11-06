@@ -126,6 +126,8 @@ class ConsumosController extends AppController
 
         if ($this->request->is(['patch', 'post', 'put'])) {
             $consumo = $this->Consumos->patchEntity($consumo, $this->request->getData());
+            $consumo->produto_id = (int)$this->request->getData('produto_id');
+            $consumo->tipo_entrada = (int)$this->request->getData('tipo_entrada');
             if ($this->Consumos->save($consumo)) {
                 $this->Flash->success(__('O usuário foi alterado.'));
 

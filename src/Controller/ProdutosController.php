@@ -114,6 +114,7 @@ class ProdutosController extends AppController
             $dados =  $this->request->getData();
             $dados['unidademedida_id'] = (int)$this->request->getData('unidademedida_id');
             $produto = $this->Produtos->patchEntity($produto, $dados);
+            $produto->unidademedida_id = (int)$this->request->getData('unidademedida_id');
             if ($this->Produtos->save($produto)) {
                 $this->Flash->success(__('O produto foi alterado.'));
 

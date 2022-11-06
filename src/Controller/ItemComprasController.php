@@ -129,6 +129,8 @@ class ItemComprasController extends AppController
             $dados['compra_id'] = (int)$dados['compra_id'];
 
             $ItemCompra = $this->ItemCompras->patchEntity($ItemCompra, $dados);
+            $ItemCompra->produto_id = $this->request->getData('produto_id');
+            $ItemCompra->compra_id = $this->request->getData('compra_id');
             if ($this->ItemCompras->save($ItemCompra)) {
                 $this->Flash->success(__('O Item Compra foi alterado.'));
 
