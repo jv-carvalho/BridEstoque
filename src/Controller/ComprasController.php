@@ -32,7 +32,12 @@ class ComprasController extends AppController
             ]
         ];
 
-        $query = $this->Compras->find('all')->where(
+        $query = $this->Compras->find('all')->join([
+            'table' => 'fornecedores',
+            'alias' => 'fornecedor',
+            'type' => 'LEFT',
+            'conditions' => 'fornecedor.id = fornecedor_id'
+        ])->autoFields(true)->select(["fornecedor.username"])->where(
             [
                 [
                     'NumeroDocumento like' => '%' . $key . '%'
@@ -111,6 +116,9 @@ class ComprasController extends AppController
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $compra = $this->Compras->patchEntity($compra, $this->request->getData());
+            $compra->TotalDaCompra =  $this->request->getData('TotalDaCompra', 'Nulo');
+            $compra->NumeroDocumento = preg_replace('/[^0-9]/', '', $this->request->getData('NumeroDocumento', 'Nulo'));
+            $compra->fornecedor_id = $this->request->getData('fornecedor_id');
             if ($this->Compras->save($compra)) {
                 $this->Flash->success(__('O usuário foi alterado.'));
 

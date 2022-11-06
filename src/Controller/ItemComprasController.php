@@ -125,8 +125,6 @@ class ItemComprasController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $dados =  $this->request->getData();
             $dados['TotalItem'] = $dados['quantidade'] * $dados['preco'];
-            $dados['produto_id'] = (int)$dados['produto_id'];
-            $dados['compra_id'] = (int)$dados['compra_id'];
 
             $ItemCompra = $this->ItemCompras->patchEntity($ItemCompra, $dados);
             $ItemCompra->produto_id = $this->request->getData('produto_id');
