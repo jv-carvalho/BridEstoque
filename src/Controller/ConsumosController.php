@@ -61,9 +61,20 @@ class ConsumosController extends AppController
      */
     public function view($id = null)
     {
-        $consumo = $this->Consumos->get($id, [
-            'contain' => [],
-        ]);
+        $query = $this->Consumos->find('all')->join([
+            'table' => 'produtos',
+            'alias' => 'produto',
+            'type' => 'LEFT',
+            'conditions' => 'produto.id = produto_id'
+        ])->autoFields(true)->select(["produto.descrição"])->join([
+            'table' => 'unidademedidas',
+            'alias' => 'unidademedida',
+            'type' => 'LEFT',
+            'conditions' => 'unidademedida.id = produto.unidademedida_id'
+        ])->autoFields(true)->select(["unidademedida.tamanho"])
+            ->where(['consumos.id' => $id]);
+
+        $consumo = $query->toArray()[0];
 
         $this->set('consumo', $consumo);
     }
