@@ -11,12 +11,12 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class ItemComprasController extends AppController{
+class ItemComprasController extends AppController
+{
 
-    public function initialize() {
+    public function initialize()
+    {
         parent::initialize();
-
-        
     }
     /**
      * Index method
@@ -37,9 +37,10 @@ class ItemComprasController extends AppController{
 
         $this->loadModel("ItemCompras");
 
-        $ItemCompras = $this->paginate($this->ItemCompras->find('all')
+        $ItemCompras = $this->paginate(
+            $this->ItemCompras->find('all')
         );
-        
+
         $this->set(compact('ItemCompras'));
     }
 
@@ -50,7 +51,8 @@ class ItemComprasController extends AppController{
      * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null){
+    public function view($id = null)
+    {
 
         $this->loadModel("ItemCompras");
 
@@ -66,17 +68,18 @@ class ItemComprasController extends AppController{
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add(){
+    public function add()
+    {
 
         $this->loadModel("ItemCompras");
-        
+
         $ItemCompra = $this->ItemCompras->newEntity();
         if ($this->request->is('post')) {
             $ItemCompra = $this->ItemCompras->patchEntity($ItemCompra, $this->request->getData());
-            $ItemCompra->quantidade = $this->request->getData('quantidade', 'Nulo');
-            $ItemCompra->preco = $this->request->getData('preco', 'Nulo');
-            //$ItemCompra->TotalItem = $this->request->getData('TotalItem', 'Nulo');
-            //debug($ItemCompra);
+            $ItemCompra->quantidade = $this->request->getData('quantidade', 0);
+            $ItemCompra->preco = $this->request->getData('preco', 0);
+            $ItemCompra->TotalItem = $ItemCompra->quantidade * $ItemCompra->preco;
+
             if ($this->ItemCompras->save($ItemCompra)) {
                 $this->Flash->success(__('O Item Compra foi salvo.'));
 
@@ -86,7 +89,7 @@ class ItemComprasController extends AppController{
         }
         $this->set(compact('ItemCompra'));
     }
-    
+
     /**
      * Edit method
      *
@@ -94,14 +97,18 @@ class ItemComprasController extends AppController{
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function edit($id = null){
+    public function edit($id = null)
+    {
 
         $this->loadModel("ItemCompras");
         $ItemCompra = $this->ItemCompras->get($id, [
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $ItemCompra = $this->ItemCompras->patchEntity($ItemCompra, $this->request->getData());
+            $dados =  $this->request->getData();
+            $dados['TotalItem'] = $dados['quantidade'] * $dados['preco'];
+
+            $ItemCompra = $this->ItemCompras->patchEntity($ItemCompra, $dados);
             if ($this->ItemCompras->save($ItemCompra)) {
                 $this->Flash->success(__('O Item Compra foi alterado.'));
 
@@ -119,7 +126,8 @@ class ItemComprasController extends AppController{
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null){
+    public function delete($id = null)
+    {
 
         $this->loadModel("ItemCompras");
 

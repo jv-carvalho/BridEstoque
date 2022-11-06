@@ -18,7 +18,7 @@
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Quantidade:') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Preço:') ?></th>
-            <!-- <th class= "text-center" scope="col"><?= $this->Paginator->sort('Total Itens:') ?></th>-->
+            <th class= "text-center" scope="col"><?= $this->Paginator->sort('Valor Total:') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
             <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th>
             <th scope="col" class="actions text-center"><?= __('Ações') ?></th>
@@ -30,7 +30,7 @@
                     <td class= "text-center"><?= $this->Number->format($ItemCompra->Id) ?></td>
                     <td class= "text-center"><?= h($ItemCompra->quantidade) ?></td>
                     <td class= "text-center"><?= h($ItemCompra->preco) ?></td>
-                    <!-- <td class= "text-center"><?= h($ItemCompra->TotalItem) ?></td> -->
+                    <td class= "text-center"><?= h($ItemCompra->TotalItem) ?></td>
                     <td class= "text-center"><?= h($ItemCompra->created) ?></td>
                     <td class= "text-center"><?= h($ItemCompra->modified) ?></td>
                     <td class="actions text-center">
