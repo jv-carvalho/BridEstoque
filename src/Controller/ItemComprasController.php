@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * ItemCompras Controller
@@ -38,7 +39,12 @@ class ItemComprasController extends AppController
         $this->loadModel("ItemCompras");
 
         $ItemCompras = $this->paginate(
-            $this->ItemCompras->find('all')
+            $this->ItemCompras->find('all')->join([
+                'table' => 'produtos',
+                'alias' => 'produto',
+                'type' => 'LEFT',
+                'conditions' => 'produto.id = produto_id'
+            ])->autoFields(true)->select(["produto.descrição"])
         );
 
         $this->set(compact('ItemCompras'));
@@ -71,6 +77,12 @@ class ItemComprasController extends AppController
     public function add()
     {
 
+        $compras = TableRegistry::getTableLocator()->get('compras');
+        $compras = $compras->find();
+
+        $produtos = TableRegistry::getTableLocator()->get('produtos');
+        $produtos = $produtos->find();
+
         $this->loadModel("ItemCompras");
 
         $ItemCompra = $this->ItemCompras->newEntity();
@@ -79,7 +91,8 @@ class ItemComprasController extends AppController
             $ItemCompra->quantidade = $this->request->getData('quantidade', 0);
             $ItemCompra->preco = $this->request->getData('preco', 0);
             $ItemCompra->TotalItem = $ItemCompra->quantidade * $ItemCompra->preco;
-
+            $ItemCompra->produto_id = $this->request->getData('produto_id');
+            $ItemCompra->compra_id = $this->request->getData('compra_id');
             if ($this->ItemCompras->save($ItemCompra)) {
                 $this->Flash->success(__('O Item Compra foi salvo.'));
 
@@ -87,7 +100,7 @@ class ItemComprasController extends AppController
             }
             $this->Flash->error(__('O Item Compra não pode ser cadastrado. Por favor, tente novamente.'));
         }
-        $this->set(compact('ItemCompra'));
+        $this->set(compact('ItemCompra', 'compras', 'produtos'));
     }
 
     /**
@@ -99,6 +112,11 @@ class ItemComprasController extends AppController
      */
     public function edit($id = null)
     {
+        $compras = TableRegistry::getTableLocator()->get('compras');
+        $compras = $compras->find();
+
+        $produtos = TableRegistry::getTableLocator()->get('produtos');
+        $produtos = $produtos->find();
 
         $this->loadModel("ItemCompras");
         $ItemCompra = $this->ItemCompras->get($id, [
@@ -116,7 +134,7 @@ class ItemComprasController extends AppController
             }
             $this->Flash->error(__('O Item Compra não pode ser alterado. Por favor, tente novamente.'));
         }
-        $this->set(compact('ItemCompra'));
+        $this->set(compact('ItemCompra', 'compras', 'produtos'));
     }
 
     /**
