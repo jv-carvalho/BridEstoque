@@ -61,9 +61,17 @@ class ProdutosController extends AppController
      */
     public function view($id = null)
     {
-        $produto = $this->Produtos->get($id, [
-            'contain' => [],
-        ]);
+
+        $query = $this->Produtos->find('all')->join([
+            'table' => 'unidademedidas',
+            'alias' => 'unidademedida',
+            'type' => 'LEFT',
+            'conditions' => 'unidademedida.id = unidademedida_id'
+        ])->autoFields(true)->select(["unidademedida.tamanho"])
+        ->where(['produtos.id' => $id]);
+
+        $produto = $query->toArray()[0];
+
 
         $this->set('produto', $produto);
     }

@@ -28,6 +28,10 @@
             <td><?= h($ItemCompra->TotalItem) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Produto') ?></th>
+            <td><?= h($ItemCompra['produto'] ? $ItemCompra['produto']['descrição'] : '') ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Criado') ?></th>
             <td><?= h($ItemCompra->created) ?></td>
         </tr>

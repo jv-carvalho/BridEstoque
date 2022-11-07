@@ -24,8 +24,8 @@
             <td><?= h($produto->descrição) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Saldo') ?></th>
-            <td><?= h($produto->saldo) ?></td>
+            <th scope="row"><?= __('Unidade Medida') ?></th>
+            <td><?= h($produto['unidademedida'] ? $produto['unidademedida']['tamanho'] : '') ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Criado') ?></th>

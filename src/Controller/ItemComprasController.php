@@ -44,7 +44,16 @@ class ItemComprasController extends AppController
                 'alias' => 'produto',
                 'type' => 'LEFT',
                 'conditions' => 'produto.id = produto_id'
-            ])->autoFields(true)->select(["produto.descrição"])
+            ])->autoFields(true)->select(["produto.descrição"])->where(
+                [
+                    'Or' =>
+                    [
+                        [
+                            'produto.descrição like' => '%' . $key . '%'
+                        ]
+                    ],
+                ]
+            )
         );
 
         $this->set(compact('ItemCompras'));
@@ -61,10 +70,15 @@ class ItemComprasController extends AppController
     {
 
         $this->loadModel("ItemCompras");
+        $query = $this->ItemCompras->find('all')->join([
+            'table' => 'produtos',
+            'alias' => 'produto',
+            'type' => 'LEFT',
+            'conditions' => 'produto.id = produto_id'
+        ])->autoFields(true)->select(["produto.descrição"])
+        ->where(['itemcompras.id' => $id]);
 
-        $ItemCompra = $this->ItemCompras->get($id, [
-            'contain' => [],
-        ]);
+        $ItemCompra = $query->toArray()[0];
 
         $this->set('ItemCompra', $ItemCompra);
     }

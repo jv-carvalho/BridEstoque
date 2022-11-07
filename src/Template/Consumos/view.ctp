@@ -25,20 +25,20 @@
             <td><?= h($consumo->quantidade) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Criado') ?></th>
-            <td><?= h($consumo->created) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Modificado') ?></th>
-            <td><?= h($consumo->modified) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Produto') ?></th>
             <td><?= h($consumo['produto'] ? $consumo['produto']['descrição'] : '') ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Unidade Medida') ?></th>
             <td><?= h($consumo['unidademedida'] ? $consumo['unidademedida']['tamanho'] : '') ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Criado') ?></th>
+            <td><?= h($consumo->created) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Modificado') ?></th>
+            <td><?= h($consumo->modified) ?></td>
         </tr>
     </table>
 </div>
