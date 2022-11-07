@@ -30,22 +30,24 @@ class FornecedoresController extends AppController
             ]
         ];
 
-        $fornecedores = $this->paginate($this->Fornecedores->find('all')->where(
+        $query = $this->Fornecedores->find('all')->where(
             [
                 'Or' =>
                 [
-                    'username like' => '%' . $key . '%'
-                ],
-                'Or' =>
-                [
-                    'email like' => '%' . $key . '%'
-                ],
-                'Or' =>
-                [
-                    'telefone like' => '%' . $key . '%'
+                    [
+                        'username like' => '%' . $key . '%'
+                    ],
+                    [
+                        'email like' => '%' . $key . '%'
+                    ],
+                    [
+                        'telefone like' =>  '%' . $key . '%'
+                    ]
                 ],
             ]
-        ));
+        );
+
+        $fornecedores = $this->paginate($query);
         
         $this->set(compact('fornecedores'));
     }

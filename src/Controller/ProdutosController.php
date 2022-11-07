@@ -31,7 +31,7 @@ class ProdutosController extends AppController
             ]
         ];
 
-        $produtos = $this->paginate($this->Produtos->find('all')->join([
+        $query = $this->Produtos->find('all')->join([
             'table' => 'unidademedidas',
             'alias' => 'unidademedida',
             'type' => 'LEFT',
@@ -40,15 +40,20 @@ class ProdutosController extends AppController
             [
                 'Or' =>
                 [
-                    'username like' => '%' . $key . '%'
-                ],
-                'Or' =>
-                [
-                    'descrição like' => '%' . $key . '%'
+                    [
+                        'username like' => '%' . $key . '%'
+                    ],
+                    [
+                        'descrição like' => '%' . $key . '%'
+                    ],
+                    [
+                        'unidademedida.tamanho like' =>  '%' . $key . '%'
+                    ]
                 ],
             ]
-        ));
+        );
 
+        $produtos = $this->paginate($query);
         $this->set(compact('produtos'));
     }
 

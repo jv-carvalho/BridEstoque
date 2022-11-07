@@ -39,9 +39,15 @@ class ComprasController extends AppController
             'conditions' => 'fornecedor.id = fornecedor_id'
         ])->autoFields(true)->select(["fornecedor.username"])->where(
             [
+                'Or' =>
                 [
-                    'NumeroDocumento like' => '%' . $key . '%'
-                ]
+                    [
+                        'NumeroDocumento like' => '%' . $key . '%'
+                    ],
+                    [
+                        'fornecedor.username like' =>  '%' . $key . '%'
+                    ]
+                ],
             ]
         );
 
