@@ -6,13 +6,14 @@
  */
 ?>
 <div class="fornecedor index large-10 medium-12 columns content">
-    <h3><?= __('Fornecedores') ?></h3>
+    <h2><?= __('Fornecedores') ?></h2>
+    <br/>
     <?= $this->Form->create(null, ['type' => 'get']) ?>
     <?= $this->Form->control('key', ['label' => 'Buscar', 'value' => $this->request->getQuery('key')]) ?>
     <?= $this->Form->submit('Filtrar') ?>
     <?= $this->Form->end() ?>
     <table cellpadding="0" cellspacing="0" class="table">
-        <br />
+        <br/>
         <thead>
             <tr>
                 <th class= "text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>

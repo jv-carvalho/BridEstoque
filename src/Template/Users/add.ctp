@@ -21,6 +21,7 @@
           <div class="users form">
             <input type="checkbox" onclick="myFunction()"> Exibir Senha
           </div>
+          <br/>
           <script>
             function myFunction() {
                 var x = document.getElementById("password");

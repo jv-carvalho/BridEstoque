@@ -6,7 +6,8 @@
  */
 ?>
 <div class="users index large-10 medium-12 columns content">
-    <h3><?= __('Unidade de Medida') ?></h3>
+    <h2><?= __('Unidade de Medida') ?></h2>
+    <br/>
     <?= $this->Form->create(null, ['type' => 'get']) ?>
     <?= $this->Form->control('key', ['label' => 'Buscar', 'value' => $this->request->getQuery('key')]) ?>
     <?= $this->Form->submit('Filtrar') ?>

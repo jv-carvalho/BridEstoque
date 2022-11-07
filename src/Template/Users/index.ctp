@@ -6,7 +6,8 @@
  */
 ?>
 <div class="users index content">
-    <h3><?= __('Usuários') ?></h3>
+    <h2><?= __('Usuários') ?></h2>
+    <br/>
     <?= $this->Form->create(null, ['type' => 'get']) ?>
     <?= $this->Form->control('key', ['label' => 'Buscar', 'value' => $this->request->getQuery('key')]) ?>
     <?= $this->Form->submit('Filtrar') ?>

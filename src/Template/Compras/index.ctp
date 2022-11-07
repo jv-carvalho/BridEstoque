@@ -6,13 +6,14 @@
  */
 ?>
 <div class="fornecedor index large-10 medium-12 columns content">
-    <h3><?= __('Compras') ?></h3>
+    <h2><?= __('Compras') ?></h2>
+    <br/>
     <?= $this->Form->create(null, ['type' => 'get']) ?>
     <?= $this->Form->control('key', ['label' => 'Buscar', 'value' => $this->request->getQuery('key')]) ?>
     <?= $this->Form->submit('Filtrar') ?>
     <?= $this->Form->end() ?>
     <table cellpadding="0" cellspacing="0" class="table">
-        <br />
+        <br/>
         <thead>
             <tr>
                 <th class="text-center" scope="col"><?= $this->Paginator->sort('Id') ?></th>
@@ -20,8 +21,8 @@
                 <th class="text-center" scope="col"><?= $this->Paginator->sort('TotalDaCompra', ['label' => 'Total Da Compra:']) ?></th>
                 <th class="text-center" scope="col"><?= $this->Paginator->sort('NumeroDocumento', ['label' => 'Numero Documento:']) ?></th>
                 <th class="text-center" scope="col">Fornecedor</th>
-                <!-- <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th> -->
-                <!-- <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th> -->
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Criado') ?></th>
+                <th class= "text-center" scope="col"><?= $this->Paginator->sort('Modificado') ?></th> 
                 <th class="text-center" scope="col" class="actions"><?= __('Ações') ?></th>
             </tr>
         </thead>
@@ -33,8 +34,8 @@
                     <td class="text-center"><?= ($compra->TotalDaCompra) ?></td>
                     <td class="text-center"><?= formataNumeroDocumento($compra->NumeroDocumento) ?></td>
                     <td class="text-center"><?= $compra['fornecedor'] ? $compra['fornecedor']['username'] : '' ?></td>
-                    <!-- <td class= "text-center"><?= h($compra->created) ?></td> -->
-                    <!-- <td class= "text-center"><?= h($compra->modified) ?></td> -->
+                    <td class= "text-center"><?= h($compra->created) ?></td>
+                    <td class= "text-center"><?= h($compra->modified) ?></td>
                     <td class="actions text-center">
                         <?= $this->Html->link(__('Ver'), ['action' => 'view', $compra->id]) ?>
                         <?= $this->Html->link(__('Editar'), ['action' => 'edit', $compra->id]) ?>

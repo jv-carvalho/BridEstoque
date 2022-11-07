@@ -6,7 +6,8 @@
  */
 ?>
 <div class="ItemCompra index large-10 medium-12 columns content">
-    <h3><?= __('Item Compra') ?></h3>
+    <h2><?= __('Item Compra') ?></h2>
+    <br/>
     <?= $this->Form->create(null, ['type' => 'get']) ?>
     <?= $this->Form->control('key', ['label' => 'Buscar', 'value' => $this->request->getQuery('key')]) ?>
     <?= $this->Form->submit('Filtrar') ?>

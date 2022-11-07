@@ -6,8 +6,8 @@
  */
 ?>
 <div class="fornecedor index large-10 medium-12 columns content">
-    <h3><?= __('Relação de Consumo') ?></h3>
-
+    <h2><?= __('Relação de Consumo') ?></h2>
+    <br/>
     <?= $this->Form->create(null, ['type' => 'get']) ?>
     <?php
     $produtos_list = array();
@@ -21,7 +21,7 @@
     <?= $this->Form->end() ?>
 
     <table cellpadding="0" cellspacing="0" class="table">
-        <br />
+        <br/>
         <thead>
             <tr>
                 <th class="text-center" scope="col">Produto</th>

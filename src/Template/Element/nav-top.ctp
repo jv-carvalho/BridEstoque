@@ -30,7 +30,7 @@ use Cake\Core\Configure; ?>
     <div class="navbar-custom-menu">
       <ul class="nav navbar-nav">
         <?php if ($username) : ?>
-          <li><?= $this->Html->link(_('SAIR'), ['controller' => 'Users', 'action' => 'logout']) ?></li>
+          <li><?= $this->Html->link(_('Sair'), ['controller' => 'Users', 'action' => 'logout']) ?></li>
         <?php endif; ?>
       </ul>
     </div>
